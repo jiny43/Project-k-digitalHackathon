@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+const http = require('http')
+const { type } = require('os')
+const port = process.env.PORT || 3000
+
+const html = `<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -19,4 +23,9 @@ var mapOptions = {
 var map = new naver.maps.Map('map', mapOptions);
 </script>
 </body>
-</html>
+</html>`
+const server = http.createServer((req,res)=>{
+  res.writeHead(200, {'Content-type':'html'})
+  res.end(html)
+})
+server.listen(port,() => console.log('서버 작동됨'))
