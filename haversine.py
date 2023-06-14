@@ -24,10 +24,9 @@ def haversine(lat1, lon1, lat2, lon2):
     return distance
 
 # 두 지점 사이의 거리 계산 예시
-lat1 = 36.3519257
-lon1 = 127.3776827
-lat2 = 36.3522347
-lon2 = 127.3783647
-
+lat1 = 36.3516411
+lon1 = 127.3782876
+lat2 = 36.3517035
+lon2 = 127.3782528
 distance = haversine(lat1, lon1, lat2, lon2)
 print(distance)
