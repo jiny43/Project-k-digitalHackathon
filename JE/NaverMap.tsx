@@ -1,7 +1,7 @@
 import React from "react";
 import NaverMapView, { Circle, Marker, Path, Polyline, Polygon } from "react-native-nmap";
 
-function MyMap() {
+const MyMap: React.FC = () => {
   const P0 = { latitude: 37.564362, longitude: 126.977011 };
   const P1 = { latitude: 37.565051, longitude: 126.978567 };
   const P2 = { latitude: 37.565383, longitude: 126.976292 };
@@ -24,6 +24,6 @@ function MyMap() {
       <Polygon coordinates={[P0, P1, P2]} color={`rgba(0, 0, 0, 0.5)`} onClick={() => console.warn('onClick! polygon')} />
     </NaverMapView>
   );
-}
+};
 
 export default MyMap;
