@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView,View,Text } from "react-native";
-import Greeting from './components/greeting';
+import Map from './components/Map';
 
 const App = () => {
   return(
@@ -10,7 +10,7 @@ const App = () => {
     <SafeAreaView>
     <View>
     <Text>Hello React!!</Text>
-    <Greeting/>
+    <Map/>
     </View>
     </SafeAreaView>
     ); 

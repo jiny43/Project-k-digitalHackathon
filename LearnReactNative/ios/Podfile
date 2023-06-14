@@ -50,4 +50,8 @@ target 'LearnReactNative' do
     )
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
   end
+  target 'NaverMapDemo' do
+
+    pod 'NMapsMap'
+  end
 end
