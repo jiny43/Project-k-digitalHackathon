@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지도(E1,E2마커 표시)</title>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=eq0arf5bzy"
+    ></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      var mapOptions = {
+        center: new naver.maps.LatLng(36.3519947, 127.3778388),
+        zoom: 20,
+        indoor: true,
+        minZoom: 8,
+        zoomControl: true,
+        zoomControlOptions: {
+          position: naver.maps.Position.TOP_RIGHT,
+        },
+      };
+
+      var map = new naver.maps.Map('map', mapOptions);
+
+      var graph = {
+        E1: { lat: 36.3522963, lng: 127.3784013 },
+        E2: { lat: 36.3522347, lng: 127.3783647 },
+      };
+
+      // E1 마커
+      var markerOptionsE1 = {
+        position: new naver.maps.LatLng(graph.E1.lat, graph.E1.lng),
+        map: map,
+      };
+      var markerE1 = new naver.maps.Marker(markerOptionsE1);
+
+      // E2 마커
+      var markerOptionsE2 = {
+        position: new naver.maps.LatLng(graph.E2.lat, graph.E2.lng),
+        map: map,
+      };
+      var markerE2 = new naver.maps.Marker(markerOptionsE2);
+    </script>
+  </body>
+</html>
