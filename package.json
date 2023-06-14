@@ -1,0 +1,21 @@
+{
+  "name": "project-k-digitalhackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jk.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiny43/Project-k-digitalHackathon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiny43/Project-k-digitalHackathon/issues"
+  },
+  "homepage": "https://github.com/jiny43/Project-k-digitalHackathon#readme",
+  "type": "module"
+}
