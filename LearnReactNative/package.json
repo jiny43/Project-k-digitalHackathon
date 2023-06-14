@@ -10,8 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "18.2.0",
+    "react": "^16.8.6",
+    "react-jsx-runtime": "^1.0.0-alpha.1",
     "react-native": "0.71.8",
+    "react-native-nmap": "^0.0.66",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
