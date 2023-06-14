@@ -232,7 +232,7 @@
       );
       console.log('경로: ' + pathWithFireExtinguishers.join(' -> '));
 
-      // 경로 선 그리기 함수
+      // 경로 보이게 하기
       function drawPath(pathCoordinates, color) {
         var path = new naver.maps.Polyline({
           map: map,
@@ -242,7 +242,7 @@
         });
       }
 
-      // 모든 출구를 포함한 경로 선 그리기 (파란색)
+      // 최단 경로💙
       var exitPathCoordinates = [];
       for (var i = 0; i < pathWithAllExits.length; i++) {
         var node = pathWithAllExits[i];
@@ -252,7 +252,7 @@
       }
       drawPath(exitPathCoordinates, '#0000FF'); // 파란색
 
-      // 소화기를 포함한 경로 선 그리기 (빨간색)
+      // 소화기 경로 🧯
       var fireExtinguisherPathCoordinates = [];
       for (var i = 0; i < pathWithFireExtinguishers.length; i++) {
         var node = pathWithFireExtinguishers[i];
@@ -260,7 +260,7 @@
           new naver.maps.LatLng(graph[node].lat, graph[node].lng)
         );
       }
-      drawPath(fireExtinguisherPathCoordinates, '#FF0000'); // 빨간색
+      drawPath(fireExtinguisherPathCoordinates, '#FF0000');
     </script>
   </body>
 </html>
