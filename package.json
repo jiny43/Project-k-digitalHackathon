@@ -1,7 +1,7 @@
 {
   "name": "project-k-digitalhackathon",
   "version": "1.0.0",
-  "description": "",
+  "description": "#### E1 ####  14179698.793041121,4349205.735477308 127.3784013 36.3522963 경로 : E2 => 7.593453563872656  E1: { E2: 7.7, F1: 23.4, R2: 13.7, D1: 29.1 },",
   "main": "jk.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
