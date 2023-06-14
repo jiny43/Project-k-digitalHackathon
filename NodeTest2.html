@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>지도(E1,E2마커 표시+경로 표시)</title>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vvgbajtb3h"
+    ></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      var mapOptions = {
+        center: new naver.maps.LatLng(36.3519947, 127.3778388),
+        zoom: 20,
+        indoor: true,
+        minZoom: 8,
+        zoomControl: true,
+        zoomControlOptions: {
+          position: naver.maps.Position.TOP_RIGHT,
+        },
+      };
+
+      var map = new naver.maps.Map('map', mapOptions);
+
+      function dijkstra(graph, start) {
+        var distances = {};
+        var previous = {};
+        var queue = new PriorityQueue();
+
+        for (var node in graph) {
+          distances[node] = Infinity;
+        }
+        distances[start] = 0;
+        queue.enqueue(0, start);
+
+        while (!queue.isEmpty()) {
+          var current = queue.dequeue();
+          var currentDistance = current.priority;
+          var currentNode = current.element;
+
+          if (currentDistance > distances[currentNode]) {
+            continue;
+          }
+
+          for (var adjacentNode in graph[currentNode]) {
+            var weight = graph[currentNode][adjacentNode];
+            var distance = currentDistance + weight;
+
+            if (distance < distances[adjacentNode]) {
+              distances[adjacentNode] = distance;
+              previous[adjacentNode] = currentNode;
+              queue.enqueue(distance, adjacentNode);
+            }
+          }
+        }
+
+        return { distances: distances, previous: previous };
+      }
+
+      function PriorityQueue() {
+        this.elements = [];
+
+        this.enqueue = function (priority, element) {
+          var item = { priority: priority, element: element };
+          var added = false;
+
+          for (var i = 0; i < this.elements.length; i++) {
+            if (item.priority < this.elements[i].priority) {
+              this.elements.splice(i, 0, item);
+              added = true;
+              break;
+            }
+          }
+
+          if (!added) {
+            this.elements.push(item);
+          }
+        };
+
+        this.dequeue = function () {
+          if (this.isEmpty()) {
+            return null;
+          }
+          return this.elements.shift();
+        };
+
+        this.isEmpty = function () {
+          return this.elements.length === 0;
+        };
+      }
+
+      var graph = {
+        E1: {
+          lat: 36.3522963,
+          lng: 127.3784013,
+          E2: 7.593453563872656,
+          F1: 28.049810311341794,
+          R2: 13.77582900568322,
+          D1: 28.75268480670516,
+        },
+        E2: {
+          lat: 36.3522347,
+          lng: 127.3783647,
+          E1: 7.593453563872656,
+          E3: 12.709204954750433,
+          F1: 27.991986046389837,
+          R2: 18.58180563565625,
+          D1: 31.218973784531613,
+        },
+        E3: {
+          lat: 36.3519499,
+          lng: 127.3784647,
+          E2: 12.709204954750433,
+          E4: 6.147096352926488,
+          E19: 5.984065675943224,
+          R2: 39.90195925823972,
+          D1: 38.76561346538597,
+        },
+        E4: {
+          lat: 36.3521044,
+          lng: 127.3784334,
+          E3: 6.147096352926488,
+          E19: 9.936343691780634,
+        },
+        E19: {
+          lat: 36.3521469,
+          lng: 127.378531,
+          E3: 5.984065675943224,
+          E4: 9.936343691780634,
+          F1: 11.739596240810807,
+          R2: 17.30251035283246,
+          D1: 19.05667083908803,
+        },
+        F1: {
+          lat: 36.352156,
+          lng: 127.3786616,
+          E1: 28.049810311341794,
+          E2: 27.991986046389837,
+          E19: 11.739596240810807,
+          R2: 18.76628662830681,
+          D1: 9.959405230195506,
+        },
+
+        R2: {
+          lat: 36.3523013,
+          lng: 127.378555,
+          E1: 13.77582900568322,
+          E2: 18.58180563565625,
+          E3: 39.90195925823972,
+          E19: 17.30251035283246,
+          F1: 18.76628662830681,
+          D1: 15.963517903958008,
+        },
+        D1: {
+          lat: 36.3522353,
+          lng: 127.3787133,
+          E1: 28.75268480670516,
+          E2: 31.218973784531613,
+          E3: 38.76561346538597,
+          E19: 19.05667083908803,
+          R2: 15.963517903958008,
+          F1: 9.959405230195506,
+        },
+      };
+
+      var startNode = 'E1';
+      var result = dijkstra(graph, startNode);
+      var distances = result.distances;
+      var previous = result.previous;
+
+      var exitNodes = ['D1', 'D2', 'D3'];
+      var fastestPathWithAllExits = Infinity;
+      var pathWithAllExits = null;
+
+      for (var i = 0; i < exitNodes.length; i++) {
+        var exitNode = exitNodes[i];
+        if (distances.hasOwnProperty(exitNode)) {
+          var distanceToExit = distances[exitNode];
+          if (distanceToExit < fastestPathWithAllExits) {
+            fastestPathWithAllExits = distanceToExit;
+            pathWithAllExits = [exitNode];
+
+            var currentNode = exitNode;
+            while (currentNode !== startNode) {
+              currentNode = previous[currentNode];
+              pathWithAllExits.unshift(currentNode);
+            }
+          }
+        }
+      }
+
+      console.log(
+        '최단 경로(모든 출구 포함): ' + fastestPathWithAllExits.toFixed(1)
+      );
+      console.log('경로: ' + pathWithAllExits.join(' -> '));
+
+      var fireExtinguisherNodes = ['F1', 'F2', 'F3'];
+      var fastestPathWithFireExtinguishers = Infinity;
+      var pathWithFireExtinguishers = null;
+
+      for (var i = 0; i < fireExtinguisherNodes.length; i++) {
+        var node = fireExtinguisherNodes[i];
+        if (distances.hasOwnProperty(node)) {
+          var distanceToNode = distances[node];
+          var distanceThroughNode = distanceToNode + distances[startNode];
+          if (distanceThroughNode < fastestPathWithFireExtinguishers) {
+            fastestPathWithFireExtinguishers = distanceThroughNode;
+            pathWithFireExtinguishers = [node];
+
+            var currentNode = node;
+            while (currentNode !== startNode) {
+              currentNode = previous[currentNode];
+              pathWithFireExtinguishers.unshift(currentNode);
+            }
+          }
+        }
+      }
+
+      console.log(
+        '최단 경로(소화기 포함): ' + fastestPathWithFireExtinguishers.toFixed(1)
+      );
+      console.log('경로: ' + pathWithFireExtinguishers.join(' -> '));
+
+      // 경로 선 그리기 함수
+      function drawPath(pathCoordinates, color) {
+        var path = new naver.maps.Polyline({
+          map: map,
+          path: pathCoordinates,
+          strokeColor: color,
+          strokeWeight: 2,
+        });
+      }
+
+      // 모든 출구를 포함한 경로 선 그리기 (파란색)
+      var exitPathCoordinates = [];
+      for (var i = 0; i < pathWithAllExits.length; i++) {
+        var node = pathWithAllExits[i];
+        exitPathCoordinates.push(
+          new naver.maps.LatLng(graph[node].lat, graph[node].lng)
+        );
+      }
+      drawPath(exitPathCoordinates, '#0000FF'); // 파란색
+
+      // 소화기를 포함한 경로 선 그리기 (빨간색)
+      var fireExtinguisherPathCoordinates = [];
+      for (var i = 0; i < pathWithFireExtinguishers.length; i++) {
+        var node = pathWithFireExtinguishers[i];
+        fireExtinguisherPathCoordinates.push(
+          new naver.maps.LatLng(graph[node].lat, graph[node].lng)
+        );
+      }
+      drawPath(fireExtinguisherPathCoordinates, '#FF0000'); // 빨간색
+    </script>
+  </body>
+</html>
