@@ -5,7 +5,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-+  [GMSServices provideAPIKey:@"_YOUR_API_KEY_"]; // add this line using the api key obtained from Google Console
++  [GMSServices provideAPIKey:@"AIzaSyCnCXJvaW6e6Nbnfb9ZJ0lZwkYgJwG3oyo"]; // add this line using the api key obtained from Google Console
 ...
 
 
