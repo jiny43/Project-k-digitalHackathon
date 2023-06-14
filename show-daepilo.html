@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>지도(E1,E2마커 표시+경로 표시)</title>
+    <title>완벽한 지도(최단경로:파랑, 소화기:빨강)</title>
     <script
       type="text/javascript"
       src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=id입력"
@@ -336,17 +336,17 @@
       );
       console.log('경로: ' + pathWithFireExtinguishers.join(' -> '));
 
-      // 경로 선 그리기 함수
-      function drawPath(pathCoordinates) {
+      // 경로 보이게 하기
+      function drawPath(pathCoordinates, color) {
         var path = new naver.maps.Polyline({
           map: map,
           path: pathCoordinates,
-          strokeColor: '#0000FF', // 파란색
+          strokeColor: color,
           strokeWeight: 2,
         });
       }
 
-      // 모든 출구를 포함한 경로 선 그리기
+      // 최단 경로💙
       var exitPathCoordinates = [];
       for (var i = 0; i < pathWithAllExits.length; i++) {
         var node = pathWithAllExits[i];
@@ -354,9 +354,9 @@
           new naver.maps.LatLng(graph[node].lat, graph[node].lng)
         );
       }
-      drawPath(exitPathCoordinates);
+      drawPath(exitPathCoordinates, '#0000FF'); // 파란색
 
-      // 소화기를 포함한 경로 선 그리기
+      // 소화기 경로 🧯
       var fireExtinguisherPathCoordinates = [];
       for (var i = 0; i < pathWithFireExtinguishers.length; i++) {
         var node = pathWithFireExtinguishers[i];
@@ -364,7 +364,7 @@
           new naver.maps.LatLng(graph[node].lat, graph[node].lng)
         );
       }
-      drawPath(fireExtinguisherPathCoordinates);
+      drawPath(fireExtinguisherPathCoordinates, '#FF0000');
     </script>
   </body>
 </html>
