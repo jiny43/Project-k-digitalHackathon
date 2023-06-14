@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>지도(E1,E2마커 표시)</title>
+    <title>지도(E1,E2마커 표시+경로 표시)</title>
     <script
       type="text/javascript"
-      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=eq0arf5bzy"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=id입력"
     ></script>
     <style>
       #map {
@@ -51,6 +51,18 @@
         map: map,
       };
       var markerE2 = new naver.maps.Marker(markerOptionsE2);
+      // E1에서 E2로 가는 경로 선
+      var pathCoordinates = [
+        new naver.maps.LatLng(graph.E1.lat, graph.E1.lng),
+        new naver.maps.LatLng(graph.E2.lat, graph.E2.lng),
+      ];
+
+      var path = new naver.maps.Polyline({
+        map: map,
+        path: pathCoordinates,
+        strokeColor: '#0000FF', // 파란색
+        strokeWeight: 2,
+      });
     </script>
   </body>
 </html>
