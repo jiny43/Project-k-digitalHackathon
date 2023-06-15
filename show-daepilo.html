@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>완벽한 지도(최단경로:파랑, 소화기:빨강)</title>
+    <title>지도(최단경로:파랑, 소화기:빨강, 화장실: 초록, 완강기:주황</title>
     <script
       type="text/javascript"
       src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=id입력"
@@ -327,11 +327,12 @@
         },
       };
 
-      var startNode = 'E14'; //fix 사용자 위치🏃🏻‍♀️
+      var startNode = 'E15'; //fix 사용자 위치🏃🏻‍♀️
       var result = dijkstra(graph, startNode);
       var distances = result.distances;
       var previous = result.previous;
 
+      //최단경로
       var exitNodes = ['D1', 'D2', 'D3'];
       var fastestPathWithAllExits = Infinity;
       var pathWithAllExits = null;
@@ -357,7 +358,7 @@
         '최단 경로(모든 출구 포함): ' + fastestPathWithAllExits.toFixed(1)
       );
       console.log('경로: ' + pathWithAllExits.join(' -> '));
-
+      //소화기 경로
       var fireExtinguisherNodes = ['F1', 'F2', 'F3'];
       var fastestPathWithFireExtinguishers = Infinity;
       var pathWithFireExtinguishers = null;
@@ -384,6 +385,34 @@
         '최단 경로(소화기 포함): ' + fastestPathWithFireExtinguishers.toFixed(1)
       );
       console.log('경로: ' + pathWithFireExtinguishers.join(' -> '));
+
+      //화장실 경로
+      var restroomExtinguisherNodes = ['R1', 'R2'];
+      var fastestPathWithRestroomExtinguishers = Infinity;
+      var pathWithRestroomExtinguishers = null;
+
+      for (var i = 0; i < restroomExtinguisherNodes.length; i++) {
+        var nodetwo = restroomExtinguisherNodes[i];
+        if (distances.hasOwnProperty(nodetwo)) {
+          var distanceToNode = distances[nodetwo];
+          var distanceThroughNode = distanceToNode + distances[startNode];
+          if (distanceThroughNode < fastestPathWithRestroomExtinguishers) {
+            fastestPathWithRestroomExtinguishers = distanceThroughNode;
+            pathWithRestroomExtinguishers = [nodetwo];
+
+            var currentNode = nodetwo;
+            while (currentNode !== startNode) {
+              currentNode = previous[currentNode];
+              pathWithRestroomExtinguishers.unshift(currentNode);
+            }
+          }
+        }
+      }
+
+      console.log(
+        '최단 경로(화장실): ' + fastestPathWithRestroomExtinguishers.toFixed(1)
+      );
+      console.log('경로: ' + pathWithRestroomExtinguishers.join(' -> '));
 
       // 경로 보이게 하기
       function drawPath(pathCoordinates, color) {
@@ -414,6 +443,15 @@
         );
       }
       drawPath(fireExtinguisherPathCoordinates, '#FF0000');
+      // 화장실 경로 🚻
+      var restroomExtinguisherPathCoordinates = [];
+      for (var i = 0; i < pathWithRestroomExtinguishers.length; i++) {
+        var node = pathWithRestroomExtinguishers[i];
+        restroomExtinguisherPathCoordinates.push(
+          new naver.maps.LatLng(graph[node].lat, graph[node].lng)
+        );
+      }
+      drawPath(restroomExtinguisherPathCoordinates, '#99CC00');
     </script>
   </body>
 </html>
