@@ -1,28 +1,15 @@
 // App.tsx
 
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import Test from './componenets/Test';
+import {View} from 'react-native';
+import AppleMap from './componenets/AppleMap';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello, World!!</Text>
-      <Test />
+    <View>
+      <AppleMap />
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-  },
-});
 
 export default App;

@@ -12,7 +12,8 @@
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.71.10",
-    "react-native-maps": "^1.7.1"
+    "react-native-maps": "^1.7.1",
+    "styled-components": "^6.0.0-rc.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
