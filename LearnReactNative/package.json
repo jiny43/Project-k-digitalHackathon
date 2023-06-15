@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "18.2.0",
     "react-native": "0.71.8",
+    "react-native-maps": "^1.7.1",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
