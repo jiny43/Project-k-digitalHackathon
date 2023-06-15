@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>지도(최단경로:파랑, 소화기:빨강, 화장실: 초록, 완강기:주황</title>
+    <title>
+      화장실경로 추가한 지도(최단경로:파랑, 소화기:빨강, 화장실: 초록,
+      완강기:주황)
+    </title>
     <script
       type="text/javascript"
       src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=id입력"
@@ -332,7 +335,6 @@
       var distances = result.distances;
       var previous = result.previous;
 
-      //최단경로
       var exitNodes = ['D1', 'D2', 'D3'];
       var fastestPathWithAllExits = Infinity;
       var pathWithAllExits = null;
@@ -358,7 +360,7 @@
         '최단 경로(모든 출구 포함): ' + fastestPathWithAllExits.toFixed(1)
       );
       console.log('경로: ' + pathWithAllExits.join(' -> '));
-      //소화기 경로
+
       var fireExtinguisherNodes = ['F1', 'F2', 'F3'];
       var fastestPathWithFireExtinguishers = Infinity;
       var pathWithFireExtinguishers = null;
@@ -386,7 +388,7 @@
       );
       console.log('경로: ' + pathWithFireExtinguishers.join(' -> '));
 
-      //화장실 경로
+      //fix 화장실 경로
       var restroomExtinguisherNodes = ['R1', 'R2'];
       var fastestPathWithRestroomExtinguishers = Infinity;
       var pathWithRestroomExtinguishers = null;
@@ -443,6 +445,7 @@
         );
       }
       drawPath(fireExtinguisherPathCoordinates, '#FF0000');
+
       // 화장실 경로 🚻
       var restroomExtinguisherPathCoordinates = [];
       for (var i = 0; i < pathWithRestroomExtinguishers.length; i++) {
