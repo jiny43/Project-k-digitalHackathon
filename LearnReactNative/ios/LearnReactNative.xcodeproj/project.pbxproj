@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* LearnReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LearnReactNativeTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-LearnReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-LearnReactNative.a */; };
+		0D48ACC1EDF98FC5D2898921 /* libPods-naverMapTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1B4104B757DF10CDE20F031 /* libPods-naverMapTestTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		181A4D4C3F410F84C0C3FD62 /* libPods-LearnReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE845CB00243092D8DBB048 /* libPods-LearnReactNativeTests.a */; };
+		43DC1D742A399BDB00CFDF8F /* naverMapTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC1D732A399BDB00CFDF8F /* naverMapTestApp.swift */; };
+		43DC1D762A399BDB00CFDF8F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC1D752A399BDB00CFDF8F /* ContentView.swift */; };
+		43DC1D782A399BDC00CFDF8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43DC1D772A399BDC00CFDF8F /* Assets.xcassets */; };
+		43DC1D7B2A399BDC00CFDF8F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43DC1D7A2A399BDC00CFDF8F /* Preview Assets.xcassets */; };
+		43DC1D852A399BDD00CFDF8F /* naverMapTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC1D842A399BDD00CFDF8F /* naverMapTestTests.swift */; };
+		43DC1D8F2A399BDD00CFDF8F /* naverMapTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC1D8E2A399BDD00CFDF8F /* naverMapTestUITests.swift */; };
+		43DC1D912A399BDD00CFDF8F /* naverMapTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC1D902A399BDD00CFDF8F /* naverMapTestUITestsLaunchTests.swift */; };
+		43DC1D9B2A3A933D00CFDF8F /* naverMapTest.app in Resources */ = {isa = PBXBuildFile; fileRef = 43DC1D712A399BDB00CFDF8F /* naverMapTest.app */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		822D7F925B66672F60DA1560 /* libPods-naverMapTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E3823E4D593C8416DDFB7EB /* libPods-naverMapTest.a */; };
+		C5A52E02B071B3A293C8414D /* libPods-LearnReactNativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB554B36FFC96FAFF8EDA90 /* libPods-LearnReactNativeTests.a */; };
+		C81907C4F951BA1CB5C43C43 /* libPods-LearnReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9224C22E25C332024CBA8D8B /* libPods-LearnReactNative.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +33,48 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = LearnReactNative;
+		};
+		43DC1D812A399BDD00CFDF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43DC1D702A399BDB00CFDF8F;
+			remoteInfo = naverMapTest;
+		};
+		43DC1D8B2A399BDD00CFDF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43DC1D702A399BDB00CFDF8F;
+			remoteInfo = naverMapTest;
+		};
+		43DC1D9C2A3A933D00CFDF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43DC1D702A399BDB00CFDF8F;
+			remoteInfo = naverMapTest;
+		};
+		43DC1D9E2A3A934900CFDF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43DC1D702A399BDB00CFDF8F;
+			remoteInfo = naverMapTest;
+		};
+		43DC1DA02A3A936500CFDF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43DC1D702A399BDB00CFDF8F;
+			remoteInfo = naverMapTest;
+		};
+		43DC1DA62A3A938200CFDF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43DC1D702A399BDB00CFDF8F;
+			remoteInfo = naverMapTest;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,15 +88,29 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LearnReactNative/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LearnReactNative/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LearnReactNative/main.m; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-LearnReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNative.debug.xcconfig"; path = "Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-LearnReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNative.release.xcconfig"; path = "Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-LearnReactNative-LearnReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNative-LearnReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-LearnReactNative-LearnReactNativeTests/Pods-LearnReactNative-LearnReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-LearnReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FD0F21C997CFAEA5C270753 /* Pods-LearnReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-LearnReactNativeTests/Pods-LearnReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
+		18448C02B8CC3FACE1C785D4 /* Pods-naverMapTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naverMapTest.release.xcconfig"; path = "Target Support Files/Pods-naverMapTest/Pods-naverMapTest.release.xcconfig"; sourceTree = "<group>"; };
+		280933ACA05CA59B2D03EDD9 /* Pods-LearnReactNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNative.release.xcconfig"; path = "Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative.release.xcconfig"; sourceTree = "<group>"; };
+		2FB554B36FFC96FAFF8EDA90 /* libPods-LearnReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DC1D712A399BDB00CFDF8F /* naverMapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = naverMapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DC1D732A399BDB00CFDF8F /* naverMapTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverMapTestApp.swift; sourceTree = "<group>"; };
+		43DC1D752A399BDB00CFDF8F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		43DC1D772A399BDC00CFDF8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43DC1D7A2A399BDC00CFDF8F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		43DC1D802A399BDD00CFDF8F /* naverMapTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = naverMapTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DC1D842A399BDD00CFDF8F /* naverMapTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverMapTestTests.swift; sourceTree = "<group>"; };
+		43DC1D8A2A399BDD00CFDF8F /* naverMapTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = naverMapTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DC1D8E2A399BDD00CFDF8F /* naverMapTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverMapTestUITests.swift; sourceTree = "<group>"; };
+		43DC1D902A399BDD00CFDF8F /* naverMapTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naverMapTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		50ECFFC09CEE8B7A6763E71B /* Pods-naverMapTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naverMapTestTests.debug.xcconfig"; path = "Target Support Files/Pods-naverMapTestTests/Pods-naverMapTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E3823E4D593C8416DDFB7EB /* libPods-naverMapTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-naverMapTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = LearnReactNative/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-LearnReactNative-LearnReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNative-LearnReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-LearnReactNative-LearnReactNativeTests/Pods-LearnReactNative-LearnReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
-		9DE845CB00243092D8DBB048 /* libPods-LearnReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE9CFA8FD0BC91137B8F3743 /* Pods-LearnReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-LearnReactNativeTests/Pods-LearnReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		91CC582CE4BC4EA55F60516B /* Pods-LearnReactNativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNativeTests.release.xcconfig"; path = "Target Support Files/Pods-LearnReactNativeTests/Pods-LearnReactNativeTests.release.xcconfig"; sourceTree = "<group>"; };
+		9224C22E25C332024CBA8D8B /* libPods-LearnReactNative.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnReactNative.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		963AB84602FE68871369F79E /* Pods-naverMapTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naverMapTestTests.release.xcconfig"; path = "Target Support Files/Pods-naverMapTestTests/Pods-naverMapTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		9CCC2A159C31982D32E11FAA /* Pods-LearnReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-LearnReactNativeTests/Pods-LearnReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EAEC3DAB089A5786EFD4001 /* Pods-LearnReactNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnReactNative.debug.xcconfig"; path = "Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative.debug.xcconfig"; sourceTree = "<group>"; };
+		AAB36E549A745778D5858E26 /* Pods-naverMapTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-naverMapTest.debug.xcconfig"; path = "Target Support Files/Pods-naverMapTest/Pods-naverMapTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C1B4104B757DF10CDE20F031 /* libPods-naverMapTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-naverMapTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -53,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181A4D4C3F410F84C0C3FD62 /* libPods-LearnReactNativeTests.a in Frameworks */,
+				C5A52E02B071B3A293C8414D /* libPods-LearnReactNativeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +127,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-LearnReactNative.a in Frameworks */,
+				C81907C4F951BA1CB5C43C43 /* libPods-LearnReactNative.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43DC1D6E2A399BDB00CFDF8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				822D7F925B66672F60DA1560 /* libPods-naverMapTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43DC1D7D2A399BDD00CFDF8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D48ACC1EDF98FC5D2898921 /* libPods-naverMapTestTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43DC1D872A399BDD00CFDF8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,10 +191,48 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-LearnReactNative.a */,
-				9DE845CB00243092D8DBB048 /* libPods-LearnReactNativeTests.a */,
+				9224C22E25C332024CBA8D8B /* libPods-LearnReactNative.a */,
+				2FB554B36FFC96FAFF8EDA90 /* libPods-LearnReactNativeTests.a */,
+				7E3823E4D593C8416DDFB7EB /* libPods-naverMapTest.a */,
+				C1B4104B757DF10CDE20F031 /* libPods-naverMapTestTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		43DC1D722A399BDB00CFDF8F /* naverMapTest */ = {
+			isa = PBXGroup;
+			children = (
+				43DC1D732A399BDB00CFDF8F /* naverMapTestApp.swift */,
+				43DC1D752A399BDB00CFDF8F /* ContentView.swift */,
+				43DC1D772A399BDC00CFDF8F /* Assets.xcassets */,
+				43DC1D792A399BDC00CFDF8F /* Preview Content */,
+			);
+			path = naverMapTest;
+			sourceTree = "<group>";
+		};
+		43DC1D792A399BDC00CFDF8F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				43DC1D7A2A399BDC00CFDF8F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		43DC1D832A399BDD00CFDF8F /* naverMapTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				43DC1D842A399BDD00CFDF8F /* naverMapTestTests.swift */,
+			);
+			path = naverMapTestTests;
+			sourceTree = "<group>";
+		};
+		43DC1D8D2A399BDD00CFDF8F /* naverMapTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				43DC1D8E2A399BDD00CFDF8F /* naverMapTestUITests.swift */,
+				43DC1D902A399BDD00CFDF8F /* naverMapTestUITestsLaunchTests.swift */,
+			);
+			path = naverMapTestUITests;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -121,6 +248,9 @@
 				13B07FAE1A68108700A75B9A /* LearnReactNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* LearnReactNativeTests */,
+				43DC1D722A399BDB00CFDF8F /* naverMapTest */,
+				43DC1D832A399BDD00CFDF8F /* naverMapTestTests */,
+				43DC1D8D2A399BDD00CFDF8F /* naverMapTestUITests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -135,6 +265,9 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* LearnReactNative.app */,
 				00E356EE1AD99517003FC87E /* LearnReactNativeTests.xctest */,
+				43DC1D712A399BDB00CFDF8F /* naverMapTest.app */,
+				43DC1D802A399BDD00CFDF8F /* naverMapTestTests.xctest */,
+				43DC1D8A2A399BDD00CFDF8F /* naverMapTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,12 +275,14 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-LearnReactNative.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-LearnReactNative.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-LearnReactNative-LearnReactNativeTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-LearnReactNative-LearnReactNativeTests.release.xcconfig */,
-				DE9CFA8FD0BC91137B8F3743 /* Pods-LearnReactNativeTests.debug.xcconfig */,
-				6FD0F21C997CFAEA5C270753 /* Pods-LearnReactNativeTests.release.xcconfig */,
+				9EAEC3DAB089A5786EFD4001 /* Pods-LearnReactNative.debug.xcconfig */,
+				280933ACA05CA59B2D03EDD9 /* Pods-LearnReactNative.release.xcconfig */,
+				9CCC2A159C31982D32E11FAA /* Pods-LearnReactNativeTests.debug.xcconfig */,
+				91CC582CE4BC4EA55F60516B /* Pods-LearnReactNativeTests.release.xcconfig */,
+				AAB36E549A745778D5858E26 /* Pods-naverMapTest.debug.xcconfig */,
+				18448C02B8CC3FACE1C785D4 /* Pods-naverMapTest.release.xcconfig */,
+				50ECFFC09CEE8B7A6763E71B /* Pods-naverMapTestTests.debug.xcconfig */,
+				963AB84602FE68871369F79E /* Pods-naverMapTestTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -159,7 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LearnReactNativeTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				89BCD121AF6CE28FB11652DD /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -178,23 +313,84 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "LearnReactNative" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				3ED73BD3F49D30169EE38958 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				AA6130FBFE10C993E61C8610 /* [CP] Embed Pods Frameworks */,
+				F11F3505BD9573D9D78DC653 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				43DC1D9D2A3A933D00CFDF8F /* PBXTargetDependency */,
+				43DC1D9F2A3A934900CFDF8F /* PBXTargetDependency */,
+				43DC1DA12A3A936500CFDF8F /* PBXTargetDependency */,
+				43DC1DA72A3A938200CFDF8F /* PBXTargetDependency */,
 			);
 			name = LearnReactNative;
 			productName = LearnReactNative;
 			productReference = 13B07F961A680F5B00A75B9A /* LearnReactNative.app */;
 			productType = "com.apple.product-type.application";
+		};
+		43DC1D702A399BDB00CFDF8F /* naverMapTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43DC1D922A399BDD00CFDF8F /* Build configuration list for PBXNativeTarget "naverMapTest" */;
+			buildPhases = (
+				81B1FA0659D93B3DE8A490E1 /* [CP] Check Pods Manifest.lock */,
+				43DC1D6D2A399BDB00CFDF8F /* Sources */,
+				43DC1D6E2A399BDB00CFDF8F /* Frameworks */,
+				43DC1D6F2A399BDB00CFDF8F /* Resources */,
+				A5657C86A20F91291C018F24 /* [CP] Embed Pods Frameworks */,
+				6C6D024A2EDE24F125A021E5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = naverMapTest;
+			productName = naverMapTest;
+			productReference = 43DC1D712A399BDB00CFDF8F /* naverMapTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		43DC1D7F2A399BDD00CFDF8F /* naverMapTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43DC1D952A399BDD00CFDF8F /* Build configuration list for PBXNativeTarget "naverMapTestTests" */;
+			buildPhases = (
+				0F6358B63812EC0128C24B6F /* [CP] Check Pods Manifest.lock */,
+				43DC1D7C2A399BDD00CFDF8F /* Sources */,
+				43DC1D7D2A399BDD00CFDF8F /* Frameworks */,
+				43DC1D7E2A399BDD00CFDF8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43DC1D822A399BDD00CFDF8F /* PBXTargetDependency */,
+			);
+			name = naverMapTestTests;
+			productName = naverMapTestTests;
+			productReference = 43DC1D802A399BDD00CFDF8F /* naverMapTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		43DC1D892A399BDD00CFDF8F /* naverMapTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43DC1D982A399BDD00CFDF8F /* Build configuration list for PBXNativeTarget "naverMapTestUITests" */;
+			buildPhases = (
+				43DC1D862A399BDD00CFDF8F /* Sources */,
+				43DC1D872A399BDD00CFDF8F /* Frameworks */,
+				43DC1D882A399BDD00CFDF8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				43DC1D8C2A399BDD00CFDF8F /* PBXTargetDependency */,
+			);
+			name = naverMapTestUITests;
+			productName = naverMapTestUITests;
+			productReference = 43DC1D8A2A399BDD00CFDF8F /* naverMapTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -202,6 +398,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -210,6 +407,17 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
+					};
+					43DC1D702A399BDB00CFDF8F = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					43DC1D7F2A399BDD00CFDF8F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 43DC1D702A399BDB00CFDF8F;
+					};
+					43DC1D892A399BDD00CFDF8F = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 43DC1D702A399BDB00CFDF8F;
 					};
 				};
 			};
@@ -228,6 +436,9 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* LearnReactNative */,
 				00E356ED1AD99517003FC87E /* LearnReactNativeTests */,
+				43DC1D702A399BDB00CFDF8F /* naverMapTest */,
+				43DC1D7F2A399BDD00CFDF8F /* naverMapTestTests */,
+				43DC1D892A399BDD00CFDF8F /* naverMapTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,7 +456,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				43DC1D9B2A3A933D00CFDF8F /* naverMapTest.app in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43DC1D6F2A399BDB00CFDF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DC1D7B2A399BDC00CFDF8F /* Preview Assets.xcassets in Resources */,
+				43DC1D782A399BDC00CFDF8F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43DC1D7E2A399BDD00CFDF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43DC1D882A399BDD00CFDF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,24 +503,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		0F6358B63812EC0128C24B6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,14 +518,14 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LearnReactNativeTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-naverMapTestTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		3ED73BD3F49D30169EE38958 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,7 +547,102 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		6C6D024A2EDE24F125A021E5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-naverMapTest/Pods-naverMapTest-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-naverMapTest/Pods-naverMapTest-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-naverMapTest/Pods-naverMapTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81B1FA0659D93B3DE8A490E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-naverMapTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89BCD121AF6CE28FB11652DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LearnReactNativeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5657C86A20F91291C018F24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-naverMapTest/Pods-naverMapTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-naverMapTest/Pods-naverMapTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-naverMapTest/Pods-naverMapTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA6130FBFE10C993E61C8610 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LearnReactNative/Pods-LearnReactNative-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F11F3505BD9573D9D78DC653 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -385,6 +698,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43DC1D6D2A399BDB00CFDF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DC1D762A399BDB00CFDF8F /* ContentView.swift in Sources */,
+				43DC1D742A399BDB00CFDF8F /* naverMapTestApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43DC1D7C2A399BDD00CFDF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DC1D852A399BDD00CFDF8F /* naverMapTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43DC1D862A399BDD00CFDF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43DC1D912A399BDD00CFDF8F /* naverMapTestUITestsLaunchTests.swift in Sources */,
+				43DC1D8F2A399BDD00CFDF8F /* naverMapTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -393,12 +732,42 @@
 			target = 13B07F861A680F5B00A75B9A /* LearnReactNative */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		43DC1D822A399BDD00CFDF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43DC1D702A399BDB00CFDF8F /* naverMapTest */;
+			targetProxy = 43DC1D812A399BDD00CFDF8F /* PBXContainerItemProxy */;
+		};
+		43DC1D8C2A399BDD00CFDF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43DC1D702A399BDB00CFDF8F /* naverMapTest */;
+			targetProxy = 43DC1D8B2A399BDD00CFDF8F /* PBXContainerItemProxy */;
+		};
+		43DC1D9D2A3A933D00CFDF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43DC1D702A399BDB00CFDF8F /* naverMapTest */;
+			targetProxy = 43DC1D9C2A3A933D00CFDF8F /* PBXContainerItemProxy */;
+		};
+		43DC1D9F2A3A934900CFDF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43DC1D702A399BDB00CFDF8F /* naverMapTest */;
+			targetProxy = 43DC1D9E2A3A934900CFDF8F /* PBXContainerItemProxy */;
+		};
+		43DC1DA12A3A936500CFDF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43DC1D702A399BDB00CFDF8F /* naverMapTest */;
+			targetProxy = 43DC1DA02A3A936500CFDF8F /* PBXContainerItemProxy */;
+		};
+		43DC1DA72A3A938200CFDF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 43DC1D702A399BDB00CFDF8F /* naverMapTest */;
+			targetProxy = 43DC1DA62A3A938200CFDF8F /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE9CFA8FD0BC91137B8F3743 /* Pods-LearnReactNativeTests.debug.xcconfig */;
+			baseConfigurationReference = 9CCC2A159C31982D32E11FAA /* Pods-LearnReactNativeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -425,7 +794,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6FD0F21C997CFAEA5C270753 /* Pods-LearnReactNativeTests.release.xcconfig */;
+			baseConfigurationReference = 91CC582CE4BC4EA55F60516B /* Pods-LearnReactNativeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -449,7 +818,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-LearnReactNative.debug.xcconfig */;
+			baseConfigurationReference = 9EAEC3DAB089A5786EFD4001 /* Pods-LearnReactNative.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -476,7 +845,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-LearnReactNative.release.xcconfig */;
+			baseConfigurationReference = 280933ACA05CA59B2D03EDD9 /* Pods-LearnReactNative.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -496,6 +865,210 @@
 				PRODUCT_NAME = LearnReactNative;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		43DC1D932A399BDD00CFDF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAB36E549A745778D5858E26 /* Pods-naverMapTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"naverMapTest/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.naverMapTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43DC1D942A399BDD00CFDF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18448C02B8CC3FACE1C785D4 /* Pods-naverMapTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"naverMapTest/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.naverMapTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		43DC1D962A399BDD00CFDF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50ECFFC09CEE8B7A6763E71B /* Pods-naverMapTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.naverMapTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/naverMapTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/naverMapTest";
+			};
+			name = Debug;
+		};
+		43DC1D972A399BDD00CFDF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 963AB84602FE68871369F79E /* Pods-naverMapTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.naverMapTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/naverMapTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/naverMapTest";
+			};
+			name = Release;
+		};
+		43DC1D992A399BDD00CFDF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.naverMapTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = naverMapTest;
+			};
+			name = Debug;
+		};
+		43DC1D9A2A399BDD00CFDF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.naverMapTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = naverMapTest;
 			};
 			name = Release;
 		};
@@ -624,6 +1197,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -653,6 +1227,33 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43DC1D922A399BDD00CFDF8F /* Build configuration list for PBXNativeTarget "naverMapTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43DC1D932A399BDD00CFDF8F /* Debug */,
+				43DC1D942A399BDD00CFDF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43DC1D952A399BDD00CFDF8F /* Build configuration list for PBXNativeTarget "naverMapTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43DC1D962A399BDD00CFDF8F /* Debug */,
+				43DC1D972A399BDD00CFDF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43DC1D982A399BDD00CFDF8F /* Build configuration list for PBXNativeTarget "naverMapTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43DC1D992A399BDD00CFDF8F /* Debug */,
+				43DC1D9A2A399BDD00CFDF8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
