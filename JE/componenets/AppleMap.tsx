@@ -17,6 +17,7 @@ const AppleMap = () => {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
+        mapType="mutedStandard" // 실내지도 정보를 표시
       />
     </Container>
   );
