@@ -1,12 +1,14 @@
 // App.tsx
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import Test from './componenets/Test';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello, World!</Text>
+      <Text style={styles.text}>Hello, World!!</Text>
+      <Test />
     </View>
   );
 };
