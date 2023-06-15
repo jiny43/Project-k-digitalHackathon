@@ -1,5 +1,7 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+# React Native Maps dependencies
+rn_maps_path = '../node_modules/react-native-maps'
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
@@ -22,6 +24,9 @@ if linkage != nil
 end
 
 target 'JE' do
+  pod 'react-native-google-maps', :path => rn_maps_path
+  pod 'GoogleMaps'
+  pod 'Google-Maps-iOS-Utils'
   config = use_native_modules!
 
   # Flags change depending on the env values.
