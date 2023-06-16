@@ -1,21 +1,24 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-// import AppleMap from './componenets/AppleMap';
+import { View, StyleSheet } from 'react-native';
+import AppleMap from './componenets/AppleMap';
 import FireAlarm from './componenets/FireAlarm';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center', 
-    alignItems: 'center', 
+  },
+  mapContainer: {
+    flex: 1,
+  },
+  FireAlarmContainer: {
+    flex: 1,
   },
 });
-
 
 const App = () => {
   return (
     <View style={styles.container}>
-      {/* <AppleMap /> */}
+      <AppleMap />
       <FireAlarm />
     </View>
   );
