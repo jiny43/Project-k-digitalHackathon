@@ -1,6 +1,10 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+
+# React Native Maps dependencies
+rn_maps_path = '../node_modules/react-native-maps'
+
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
