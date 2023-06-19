@@ -3,28 +3,40 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Image } from 'react-native';
 
 const styles = StyleSheet.create({
-  fireAlarmContainer: {
-    width: '90%',
-    height: '10%',
-    position: 'absolute',
-    top: 20,
-    left: 20,
-    right: 0,
-    bottom: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
+  Container: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    flexDirection: 'row',
   },
   text: {
     color: 'black',
+  },
+  leftContainer: {
+    width: '20%',
+    display: 'flex',
+    alignItems: 'center',
+    alignItems: 'center',
+    // flexDirection: 'row',
+  },
+  rightContainer: {
+    width: '80%',
+    // flexDirection: 'row',
   },
 });
 
 const ExpectedTime = () => {
   return (
-    <View style={styles.fireAlarmContainer}>
-      <Image source={require('../img/Group2.png')} />
-      <Text style={styles.text}>예상 출동 시간</Text>
-      <Text style={styles.text}>5min</Text>
+    <View style={styles.Container}>
+      <View style={styles.leftContainer}>
+        <Image source={require('../img/Group1.png')} />
+      </View>
+      <View style={styles.rightContainer}>
+        <Text style={styles.text}>예상 출동 시간</Text>
+        <Text style={styles.text}>5min</Text>
+      </View>
     </View>
   );
 };

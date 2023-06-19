@@ -3,28 +3,39 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Image } from 'react-native';
 
 const styles = StyleSheet.create({
-  fireAlarmContainer: {
-    width: '90%',
-    height: '10%',
-    position: 'absolute',
-    top: 20,
-    left: 20,
-    right: 0,
-    bottom: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
+  Container: {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    flexDirection: 'row',
   },
   text: {
     color: 'black',
+  },
+  leftContainer: {
+    width: '20%',
+    display: 'flex',
+    alignItems: 'center',
+    // flexDirection: 'row',
+  },
+  rightContainer: {
+    width: '80%',
+    // flexDirection: 'row',
   },
 });
 
 const CurrentLocation = () => {
   return (
-    <View style={styles.fireAlarmContainer}>
-      <Image source={require('../img/Group1.png')} />
-      <Text style={styles.text}>현재 내 위치</Text>
-      <Text style={styles.text}>대전 서구 갤러리아 백화점</Text>
+    <View style={styles.Container}>
+      <View style={styles.leftContainer}>
+        <Image source={require('../img/Group2.png')} />
+      </View>
+      <View style={styles.rightContainer}>
+        <Text style={styles.text}>현재 내 위치</Text>
+        <Text style={styles.text}>갤러리아 타임월드</Text>
+      </View>
     </View>
   );
 };
