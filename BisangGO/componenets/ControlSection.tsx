@@ -97,8 +97,8 @@ const ControlSection = () => {
       {...panResponder.panHandlers} // PanResponder 이벤트 핸들러 추가
     >
       <NearbyFireStation></NearbyFireStation>
-      {/* <CurrentLocation></CurrentLocation> */}
-      {/* <ExpectedTime></ExpectedTime> */}
+      <CurrentLocation></CurrentLocation>
+      <ExpectedTime></ExpectedTime>
     </Animated.View>
   );
 };

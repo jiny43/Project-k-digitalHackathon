@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Image } from 'react-native';
 
 const styles = StyleSheet.create({
   fireAlarmContainer: {
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
 const CurrentLocation = () => {
   return (
     <View style={styles.fireAlarmContainer}>
+      <Image source={require('../img/Group1.png')} />
       <Text style={styles.text}>현재 내 위치</Text>
       <Text style={styles.text}>대전 서구 갤러리아 백화점</Text>
     </View>

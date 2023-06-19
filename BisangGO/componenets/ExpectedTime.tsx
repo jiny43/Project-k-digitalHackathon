@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { Image } from 'react-native';
 
 const styles = StyleSheet.create({
   fireAlarmContainer: {
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
 const ExpectedTime = () => {
   return (
     <View style={styles.fireAlarmContainer}>
+      <Image source={require('../img/Group2.png')} />
       <Text style={styles.text}>예상 출동 시간</Text>
       <Text style={styles.text}>5min</Text>
     </View>
