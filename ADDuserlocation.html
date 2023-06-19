@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>대피로안내지도</title>
+    <title>대피로지도</title>
     <script
       type="text/javascript"
-      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ID입력"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=id입력"
     ></script>
     <style>
       #map {
@@ -772,11 +772,19 @@
           strokeColor: color,
           strokeWeight: 2,
         });
+        return path;
       }
+      var currentPath = null;
+      var currentCircle = null;
+      // var firePath = null;
 
       // 위치 선택 이벤트
       naver.maps.Event.addListener(map, 'click', function (e) {
         var selectedPosition = e.coord; // 선택한 위치의 좌표
+         // 이전에 그려진 원 제거
+        if (currentCircle) {
+          currentCircle.setMap(null);
+        }
         // 클릭한 위치에 원 생성
         var circle = new naver.maps.Circle({
           map: map,
@@ -841,6 +849,10 @@
             '최단 경로(모든 출구 포함): ' + fastestPathWithAllExits.toFixed(1)
           );
           console.log('경로: ' + pathWithAllExits.join(' -> '));
+          // 이전에 그려진 경로 제거
+          if (currentPath) {
+            currentPath.setMap(null);
+          }
 
           var fireExtinguisherNodes = ['F1', 'F2', 'F3'];
           var fastestPathWithFireExtinguishers = Infinity;
@@ -911,8 +923,9 @@
               new naver.maps.LatLng(graph[node].lat, graph[node].lng)
             );
           }
-          drawPath(exitPathCoordinates, '#0000FF'); // 파란색
-
+          currentPath = drawPath(exitPathCoordinates, '#0000FF'); // 파란색 
+          currentCircle = circle;
+/* fix
           // 소화기 경로 🧯
           var fireExtinguisherPathCoordinates = [];
           for (var i = 0; i < pathWithFireExtinguishers.length; i++) {
@@ -930,7 +943,7 @@
               new naver.maps.LatLng(graph[node].lat, graph[node].lng)
             );
           }
-          drawPath(restroomExtinguisherPathCoordinates, '#99CC00');
+          drawPath(restroomExtinguisherPathCoordinates, '#99CC00'); */
         }
       });
 
