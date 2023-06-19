@@ -32,6 +32,10 @@
 
 import React, {useRef} from 'react';
 import {View, Text, StyleSheet, PanResponder, Animated} from 'react-native';
+import ARconversion from './ARconversion';
+import VoiceDirection from './VoiceDirection';
+import SearchLocation from './SearchLocation';
+import SearchRoute from './SearchRoute';
 
 const styles = StyleSheet.create({
   controlSection: {
@@ -48,6 +52,30 @@ const styles = StyleSheet.create({
   overlayText: {
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  bottomSection: {
+    width: '100%',
+    height: '40%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  bottomLeftSection: {
+    width: '47%',
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  bottomRightSection: {
+    width: '47%',
+    height: '100%',
+  },
+  bottomLeftInLeft: {
+    width: '100%',
+    height: '50%',
+    display: 'flex',
+    flexDirection: 'row',
   },
 });
 
@@ -95,7 +123,19 @@ const ControlSection = () => {
       style={[styles.controlSection, {top: controlSectionTop}]} // ControlSection의 상단 위치 조정
       {...panResponder.panHandlers} // PanResponder 이벤트 핸들러 추가
     >
-      <Text style={styles.overlayText}>컨트롤 섹션 부분입니다!!!</Text>
+      <Text style={styles.overlayText}>컨트롤 섹션 부분입니다!!</Text>
+      <View style={styles.bottomSection}>
+        <View style={styles.bottomLeftSection}>
+          <View style={styles.bottomLeftInLeft}>
+            <SearchLocation />
+            <SearchRoute />
+          </View>
+          <VoiceDirection />
+        </View>
+        <View style={styles.bottomRightSection}>
+          <ARconversion />
+        </View>
+      </View>
     </Animated.View>
   );
 };
