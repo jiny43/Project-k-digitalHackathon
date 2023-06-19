@@ -13,6 +13,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'red',
+    borderRadius: 10,
+    opacity: 0.5,
   },
   text: {
     color: 'white',
