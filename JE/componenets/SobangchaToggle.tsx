@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import React, {useState} from 'react';
+import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
 
 const SobangchaToggle = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -12,8 +12,7 @@ const SobangchaToggle = () => {
     <View style={styles.container}>
       <TouchableOpacity
         style={[styles.button, isToggled && styles.buttonToggled]}
-        onPress={handleToggle}
-      >
+        onPress={handleToggle}>
         <Text style={styles.buttonText}>
           {isToggled ? '대기 중' : '출동 중'}
         </Text>
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'black',
     fontSize: 16,
-    fontWeight : "bold"
+    fontWeight: 'bold',
   },
 });
 

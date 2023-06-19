@@ -135,7 +135,7 @@ const ControlSection = () => {
 
   const controlSectionTop = pan.interpolate({
     inputRange: [0, 200], // 크기 변경 범위 설정
-    outputRange: ['20%', '80%'], // 크기 변경에 따른 상대적인 상단 위치 설정
+    outputRange: ['20%', '75%'], // 크기 변경에 따른 상대적인 상단 위치 설정
     extrapolate: 'clamp',
   });
 
