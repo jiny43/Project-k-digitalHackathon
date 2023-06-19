@@ -12,19 +12,19 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
   },
   text: {
-    color: 'white',
+    color: 'black',
   },
 });
 
-const FireAlarm = () => {
+const CurrentLocation = () => {
   return (
     <View style={styles.fireAlarmContainer}>
-      <Text style={styles.text}>갤러리아 타임월드 3F(A.P.C)에서 화재가 발생하였습니다.</Text>
+      <Text style={styles.text}>현재 내 위치</Text>
+      <Text style={styles.text}>대전 서구 갤러리아 백화점</Text>
     </View>
   );
 };
 
-export default FireAlarm;
+export default CurrentLocation;

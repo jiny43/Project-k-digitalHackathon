@@ -4,6 +4,7 @@ import AppleMap from './componenets/AppleMap';
 import FireAlarm from './componenets/FireAlarm';
 import ControlSection from './componenets/ControlSection';
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -21,7 +22,8 @@ const App = () => {
     <View style={styles.container}>
       <AppleMap />
       <FireAlarm />
-      <ControlSection></ControlSection>
+      <ControlSection>
+      </ControlSection>
     </View>
   );
 };

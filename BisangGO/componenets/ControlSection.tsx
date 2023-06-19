@@ -32,7 +32,9 @@
 
 import React, {useRef} from 'react';
 import {View, Text, StyleSheet, PanResponder, Animated} from 'react-native';
-
+import CurrentLocation from './CurrentLocation';
+import ExpectedTime from './ExpectedTime';
+import NearbyFireStation from './NearbyFireStation';
 const styles = StyleSheet.create({
   controlSection: {
     position: 'absolute',
@@ -94,7 +96,9 @@ const ControlSection = () => {
       style={[styles.controlSection, {top: controlSectionTop}]} // ControlSection의 상단 위치 조정
       {...panResponder.panHandlers} // PanResponder 이벤트 핸들러 추가
     >
-      <Text style={styles.overlayText}>컨트롤 섹션 부분입니다!</Text>
+      <NearbyFireStation></NearbyFireStation>
+      {/* <CurrentLocation></CurrentLocation> */}
+      {/* <ExpectedTime></ExpectedTime> */}
     </Animated.View>
   );
 };

@@ -12,19 +12,19 @@ const styles = StyleSheet.create({
     bottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
   },
   text: {
-    color: 'white',
+    color: 'black',
   },
 });
 
-const FireAlarm = () => {
+const ExpectedTime = () => {
   return (
     <View style={styles.fireAlarmContainer}>
-      <Text style={styles.text}>갤러리아 타임월드 3F(A.P.C)에서 화재가 발생하였습니다.</Text>
+      <Text style={styles.text}>예상 출동 시간</Text>
+      <Text style={styles.text}>5min</Text>
     </View>
   );
 };
 
-export default FireAlarm;
+export default ExpectedTime;
