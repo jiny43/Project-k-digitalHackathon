@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>폴리곤으로 실내지도 대체</title>
+    <title>실내지도 방안 2.텍스트 입력(수정해야함)</title>
     <script
       type="text/javascript"
       src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=id입력"
@@ -56,6 +56,47 @@
         strokeOpacity: 0.6,
         strokeWeight: 3,
         clickable: true,
+      });
+
+      //마커
+      // 마커를 생성합니다.
+      var marker = new naver.maps.Marker({
+        position: new naver.maps.LatLng(36.3520506, 127.3778274),
+        map: map, // map은 네이버지도 객체입니다.
+      });
+
+      // 마커 스타일을 설정합니다.
+      var markerStyle = {
+        width: '40px', // 마커의 가로 크기를 설정합니다.
+        height: '40px', // 마커의 세로 크기를 설정합니다.
+        // backgroundColor: '#000000', // 마커의 배경색을 설정합니다.
+        color: '#000000', // 마커의 텍스트 색상을 설정합니다.
+        textAlign: 'center', // 마커의 텍스트 정렬 방식을 설정합니다.
+        fontSize: '12px', // 마커의 텍스트 크기를 설정합니다.
+        fontWeight: 'bold', // 마커의 텍스트 굵기를 설정합니다.
+        lineHeight: '40px', // 마커의 텍스트 줄 높이를 설정합니다.
+      };
+
+      // 텍스트를 포함한 HTML 요소를 생성합니다.
+      var textElement = document.createElement('div');
+      textElement.innerText = '롤렉스'; // 텍스트 내용을 설정합니다.
+      textElement.style.width = markerStyle.width; // 마커의 가로 크기를 설정합니다.
+      textElement.style.height = markerStyle.height; // 마커의 세로 크기를 설정합니다.
+      textElement.style.backgroundColor = markerStyle.backgroundColor; // 마커의 배경색을 설정합니다.
+      textElement.style.color = markerStyle.color; // 마커의 텍스트 색상을 설정합니다.
+      textElement.style.textAlign = markerStyle.textAlign; // 마커의 텍스트 정렬 방식을 설정합니다.
+      textElement.style.fontSize = markerStyle.fontSize; // 마커의 텍스트 크기를 설정합니다.
+      textElement.style.fontWeight = markerStyle.fontWeight; // 마커의 텍스트 굵기를 설정합니다.
+      textElement.style.lineHeight = markerStyle.lineHeight; // 마커의 텍스트 줄 높이를 설정합니다.
+
+      // 마커에 텍스트 요소를 추가합니다.
+      marker.setIcon({
+        content: textElement.outerHTML, // 텍스트 요소를 마커 내용으로 설정합니다.
+        size: new naver.maps.Size(markerStyle.width, markerStyle.height), // 마커의 크기를 설정합니다.
+        anchor: new naver.maps.Point(
+          markerStyle.width / 2,
+          markerStyle.height / 2
+        ), // 마커의 앵커 지점을 설정합니다.
       });
 
       function dijkstra(graph, start) {
