@@ -22,17 +22,17 @@
 
     <script>
       var HOME_PATH = window.HOME_PATH || '.';
-      var position = new naver.maps.LatLng(36.3522353, 127.3787133);
-      var position2 = new naver.maps.LatLng(36.3517721, 127.3781582);
+      var door1 = new naver.maps.LatLng(36.3522353, 127.3787133);
+      var door2 = new naver.maps.LatLng(36.3520885, 127.3776764);
 
       var map = new naver.maps.Map('map', {
-        center: position,
+        center: door1,
         zoom: 19,
         zoomControl: false
       });
 
       var markerOptions = {
-        position: position,
+        position: door1,
         map: map,
         icon: {
           url: HOME_PATH + '/img/example/Door.png',
@@ -43,7 +43,7 @@
       };
 
       var markerOptions2 = {
-        position: position2,
+        position: door2,
         map: map,
         icon: {
           url: HOME_PATH + '/img/example/beacon.png',
