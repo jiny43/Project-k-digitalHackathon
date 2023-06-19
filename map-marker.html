@@ -773,6 +773,84 @@ function drawPath(pathCoordinates, color) {
       dist = dist * 60 * 1.1515 * 1.609344; // km로 변환
       return dist;
     }
+   // 매장명 작성 (마커)
+var markers = [
+  {
+    position: new naver.maps.LatLng(36.3520692,127.3777868),
+    text: '롤렉스',
+  },
+  {
+    position: new naver.maps.LatLng(36.3520628,127.3778939),
+    text: '튜더',
+  }, 
+  {
+    position: new naver.maps.LatLng(36.3520692,127.3779661),
+    text: '수트서플라이',
+  },
+  
+];
+
+// 스타일
+var markerStyle = {
+  // width: '40px',
+  height: '40px',
+  color: '#000000',
+  textAlign: 'center',
+  fontSize: '12px',
+  fontWeight: 'bold',
+  lineHeight: '40px',
+};
+
+// 마커와 텍스트 생성
+markers.forEach(function (markerInfo) {
+  var marker = new naver.maps.Marker({
+    position: markerInfo.position,
+    map: map,
+  });
+
+  // 텍스트 포함
+  var textElement = document.createElement('div');
+  textElement.innerText = markerInfo.text;
+  textElement.style.width = markerStyle.width;
+  textElement.style.height = markerStyle.height;
+  textElement.style.color = markerStyle.color;
+  textElement.style.textAlign = markerStyle.textAlign;
+  textElement.style.fontSize = markerStyle.fontSize;
+  textElement.style.fontWeight = markerStyle.fontWeight;
+  textElement.style.lineHeight = markerStyle.lineHeight;
+
+  marker.setIcon({
+    content: textElement.outerHTML,
+    size: new naver.maps.Size(markerStyle.width, markerStyle.height),
+    anchor: new naver.maps.Point(
+      markerStyle.width / 2,
+      markerStyle.height / 2
+    ),
+  });
+});
+ // 사용자 위치
+ navigator.geolocation.getCurrentPosition(function (position) {
+        var userLatLng = new naver.maps.LatLng(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+
+        // 사용자 위치(디자인)
+        var circle = new naver.maps.Circle({
+          map: map,
+          center: userLatLng,
+          radius: 2, 
+          fillColor: '#0072FF', 
+          fillOpacity: 0.3,
+          strokeColor: '#0072FF', 
+          strokeOpacity: 0.6,
+          strokeWeight: 2,
+        });
+
+        // 지도 중심 위치를 사용자의 위치로 이동
+        map.setCenter(userLatLng);
+      });
+
 
 
 
