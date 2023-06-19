@@ -32,6 +32,10 @@
 
 import React, {useRef} from 'react';
 import {View, Text, StyleSheet, PanResponder, Animated} from 'react-native';
+import CurrentLocation from './CurrentLocation';
+import ExpectedTime from './ExpectedTime';
+import NearbyFireStation from './NearbyFireStation';
+import ToggleView from './ToggleView';
 import ARconversion from './ARconversion';
 import VoiceDirection from './VoiceDirection';
 import SearchLocation from './SearchLocation';
@@ -45,6 +49,7 @@ const styles = StyleSheet.create({
     width: '96%',
     height: '80%',
     backgroundColor: '#FFF',
+    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 20,
@@ -76,6 +81,22 @@ const styles = StyleSheet.create({
     height: '50%',
     display: 'flex',
     flexDirection: 'row',
+  },
+  midSection: {
+    width: '100%',
+    height: '30%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  topSection: {
+    width: '100%',
+    height: '30%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
 });
 
@@ -123,7 +144,16 @@ const ControlSection = () => {
       style={[styles.controlSection, {top: controlSectionTop}]} // ControlSection의 상단 위치 조정
       {...panResponder.panHandlers} // PanResponder 이벤트 핸들러 추가
     >
-      <Text style={styles.overlayText}>컨트롤 섹션 부분입니다!!</Text>
+      <View style={styles.topSection}>
+        <NearbyFireStation />
+        <CurrentLocation />
+        <ExpectedTime />
+      </View>
+
+      <View style={styles.midSection}>
+        <ToggleView />
+      </View>
+
       <View style={styles.bottomSection}>
         <View style={styles.bottomLeftSection}>
           <View style={styles.bottomLeftInTop}>

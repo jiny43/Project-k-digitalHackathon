@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: 'bold',
     textAlign: 'left',
-    marginTop: 80,
+    marginTop: 70,
     marginLeft: 10,
   },
 });
