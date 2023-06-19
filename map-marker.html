@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대피로안내지도</title>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ID입력"
+    ></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 844px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      var mapOptions = {
+        center: new naver.maps.LatLng(36.3519688, 127.3781835),
+        zoom: 20,
+        indoor: true,
+        minZoom: 8,
+        // zoomControl: true,
+        zoomControlOptions: {
+          position: naver.maps.Position.TOP_RIGHT,
+        },
+      };
+
+      var map = new naver.maps.Map('map', mapOptions);
+
+      var polygon = new naver.maps.Polygon({
+        map: map,
+        paths: [
+          [//롤렉스
+            new naver.maps.LatLng(36.3520875, 127.3777705),
+            new naver.maps.LatLng(36.3520897, 127.3778833),
+            new naver.maps.LatLng(36.352012, 127.3778869),
+            new naver.maps.LatLng(36.3520083, 127.3777723) ,
+          ],
+          [//튜더
+            new naver.maps.LatLng(36.3520897, 127.3778833),
+            new naver.maps.LatLng(36.3520908,127.3779513),
+            new naver.maps.LatLng(36.3520167,127.3779539) , 
+            new naver.maps.LatLng(36.352012, 127.3778869),
+          ],
+          [//수트서플라이
+            new naver.maps.LatLng(36.3520908,127.3779513),
+            new naver.maps.LatLng(36.3520912,127.3780659),            
+            new naver.maps.LatLng(36.3520156,127.3780679) , 
+            new naver.maps.LatLng(36.3520167,127.3779539) , 
+          ],
+          [//브라이틀링
+            new naver.maps.LatLng(36.3520912,127.3780659),            
+            new naver.maps.LatLng(36.3520896,127.3780987),
+            new naver.maps.LatLng(36.3520183,127.3781751) , 
+            new naver.maps.LatLng(36.3520156,127.3780679) , 
+          ],
+          // fix
+          [//프라다 왼쪽 매장
+          new naver.maps.LatLng(36.3520896,127.3780987),
+            new naver.maps.LatLng(36.3520928,127.3781435),         
+            new naver.maps.LatLng(36.3521014,127.3781462) ,
+            new naver.maps.LatLng(36.3520755,127.3782106) , 
+            new naver.maps.LatLng(36.3520183,127.3781751) , 
+          ],
+          [//프라다
+          new naver.maps.LatLng(36.3521014,127.3781462) ,
+            new naver.maps.LatLng(36.3521957,127.3782096),
+            new naver.maps.LatLng(36.352171,127.3782709) , 
+            new naver.maps.LatLng(36.3520755,127.3782106) , 
+          ],
+          [//페라가모
+            new naver.maps.LatLng(36.3522768,127.3782561),
+            new naver.maps.LatLng(36.3522346,127.3783628) ,
+            new naver.maps.LatLng(36.3522967,127.3784013) , 
+            new naver.maps.LatLng(36.3523373,127.3782946) , 
+          ],
+          [//델보
+            new naver.maps.LatLng(36.3521957,127.3782096),
+            new naver.maps.LatLng(36.3521033,127.37843) ,
+            new naver.maps.LatLng(36.3521495,127.3784616) , 
+            new naver.maps.LatLng(36.3522434,127.3782353) , 
+          ],
+          [//티파니앤코
+            new naver.maps.LatLng(36.3517853, 127.3779617),
+            new naver.maps.LatLng(36.3517912, 127.3779863),
+            new naver.maps.LatLng(36.3517463, 127.3780993),
+            new naver.maps.LatLng(36.3516579, 127.3780436),
+            new naver.maps.LatLng(36.3516843, 127.3779609),
+          ], 
+          [//샤넬
+            new naver.maps.LatLng(36.3519903, 127.3781325),
+            new naver.maps.LatLng(36.351989, 127.3781816),
+            new naver.maps.LatLng(36.3518885, 127.3781208),
+            new naver.maps.LatLng(36.3519054,127.3780811),
+          ], 
+            [//바이레도
+            new naver.maps.LatLng(36.3519054, 127.3780811),
+            new naver.maps.LatLng(36.3518885, 127.3781208),
+            new naver.maps.LatLng(36.3518166, 127.378077),
+            new naver.maps.LatLng(36.3518322, 127.3780369),
+          ], 
+            [//키엘
+            new naver.maps.LatLng(36.3517454, 127.3780996),
+            new naver.maps.LatLng(36.3516554, 127.378043),
+            new naver.maps.LatLng(36.3516359, 127.3780976),
+            new naver.maps.LatLng(36.3516326, 127.3781219),
+            new naver.maps.LatLng(36.3516749, 127.3781488),
+            new naver.maps.LatLng(36.3516966, 127.3780969),
+            new naver.maps.LatLng(36.3517362, 127.3781198),
+          ],
+            [//조말론
+            new naver.maps.LatLng(36.3516755, 127.3781489),
+            new naver.maps.LatLng(36.351663, 127.3781786),
+            new naver.maps.LatLng(36.3516505, 127.3781833), 
+            new naver.maps.LatLng(36.3516272, 127.3781676),
+            new naver.maps.LatLng(36.3516272, 127.3781401),
+            new naver.maps.LatLng(36.3516315, 127.3781213),
+          ], 
+            [//젠틀몬스터
+            new naver.maps.LatLng(36.3517719, 127.3781602),
+            new naver.maps.LatLng(36.3517633, 127.378179),
+            new naver.maps.LatLng(36.3517244, 127.3781548),
+            new naver.maps.LatLng(36.3517325, 127.3781341), 
+          ], 
+          
+            [//바비브라운
+            new naver.maps.LatLng(36.3517275, 127.3781938),
+            new naver.maps.LatLng(36.3517183, 127.3782126),
+            new naver.maps.LatLng(36.3517107, 127.378232),
+            new naver.maps.LatLng(36.3516713, 127.3782058), 
+            new naver.maps.LatLng(36.3516783, 127.3781897), 
+            new naver.maps.LatLng(36.351688, 127.3781696), 
+          ], 
+          [
+            new naver.maps.LatLng(36.3520334, 127.3784607),
+            new naver.maps.LatLng(36.3519934, 127.3785599),
+            new naver.maps.LatLng(36.3518158, 127.3784479),
+            new naver.maps.LatLng(36.3518562, 127.37835),
+          ],
+          [
+            new naver.maps.LatLng(36.3521462, 127.378531),
+            new naver.maps.LatLng(36.3521343, 127.3785598),
+            new naver.maps.LatLng(36.3520219, 127.3784893),
+            new naver.maps.LatLng(36.3520334, 127.3784607),
+          ],
+          [
+            new naver.maps.LatLng(36.3518315, 127.3784103),
+            new naver.maps.LatLng(36.3518158, 127.3784479),
+            new naver.maps.LatLng(36.3517753, 127.3784238),
+            new naver.maps.LatLng(36.351792, 127.3783856),
+          ],
+          [//설화수
+            new naver.maps.LatLng(36.3520253, 127.3782558),
+            new naver.maps.LatLng(36.3519934, 127.3782343),
+            new naver.maps.LatLng(36.351974, 127.3782859),
+            new naver.maps.LatLng(36.3520053, 127.3783053),
+          ],
+          [//헤라
+            new naver.maps.LatLng(36.3520053, 127.3783053),
+            new naver.maps.LatLng(36.351974, 127.3782859),
+            new naver.maps.LatLng(36.3519535, 127.3783348),
+            new naver.maps.LatLng(36.3519854, 127.3783542),
+          ],
+          [//딥디크
+            new naver.maps.LatLng(36.3521053, 127.3783066),
+            new naver.maps.LatLng(36.3520745, 127.3782858),
+            new naver.maps.LatLng(36.352034, 127.3783857),
+            new naver.maps.LatLng(36.3520659, 127.3784051),
+          ],
+          [//산타마리아노벨라
+            new naver.maps.LatLng(36.3520745, 127.3782858),
+            new naver.maps.LatLng(36.3520425, 127.3782637),
+            new naver.maps.LatLng(36.3520214, 127.3783153),
+            new naver.maps.LatLng(36.3520549, 127.3783361),
+          ],
+          [//겔랑
+            new naver.maps.LatLng(36.3520549, 127.3783361),
+            new naver.maps.LatLng(36.3520214, 127.3783153),
+            new naver.maps.LatLng(36.3520025, 127.3783656),
+            new naver.maps.LatLng(36.352034, 127.3783857),
+          ],
+          [//시슬리
+            new naver.maps.LatLng(36.3519047, 127.3783053),
+            new naver.maps.LatLng(36.351834, 127.3782604),
+            new naver.maps.LatLng(36.3518162, 127.3783),
+            new naver.maps.LatLng(36.351888, 127.3783456),
+          ],
+          [//에스티로더
+            new naver.maps.LatLng(36.351834, 127.3782604),
+            new naver.maps.LatLng(36.3517595, 127.3782142),
+            new naver.maps.LatLng(36.3517438, 127.3782538),
+            new naver.maps.LatLng(36.3518162, 127.3783),
+          ],
+          [//디올
+            new naver.maps.LatLng(36.3518475, 127.378345),
+            new naver.maps.LatLng(36.3517924, 127.3783095),
+            new naver.maps.LatLng(36.3517762, 127.3783497),
+            new naver.maps.LatLng(36.3518313, 127.3783846),
+          ],
+          [//라메르
+            new naver.maps.LatLng(36.3517827, 127.3783035),
+            new naver.maps.LatLng(36.35176, 127.3782894),
+            new naver.maps.LatLng(36.3517433, 127.378329),
+            new naver.maps.LatLng(36.3517665, 127.3783444),
+          ],
+          [//톰포드뷰티
+            new naver.maps.LatLng(36.35176, 127.3782894),
+            new naver.maps.LatLng(36.3517022, 127.3782546),
+            new naver.maps.LatLng(36.3516871, 127.3782942),
+            new naver.maps.LatLng(36.3517433, 127.378329),
+          ],
+          [//MAC
+            new naver.maps.LatLng(36.3517324, 127.3783368),
+            new naver.maps.LatLng(36.351659, 127.3782892),
+            new naver.maps.LatLng(36.3516698, 127.3783321),
+            new naver.maps.LatLng(36.351693, 127.3783629),
+            new naver.maps.LatLng(36.3517119, 127.3783823),
+          ],
+          [//구찌
+            new naver.maps.LatLng(36.3519976,127.3777282),
+            new naver.maps.LatLng(36.3519971,127.3778375),
+            new naver.maps.LatLng(36.351774,127.3778302),
+            new naver.maps.LatLng(36.3517767,127.3777759),
+            new naver.maps.LatLng(36.3517492,127.3777759),
+            new naver.maps.LatLng(36.3517649,127.3777316),
+          ],
+          [//까르디에
+            new naver.maps.LatLng(36.3517767,127.3777759),
+            new naver.maps.LatLng(36.351774,127.3778302),
+            new naver.maps.LatLng(36.3517875,127.3779623),
+            new naver.maps.LatLng(36.3516843,127.3779603),
+            new naver.maps.LatLng(36.3517492,127.3777759),
+          ],
+          [//유겐
+            new naver.maps.LatLng(36.3519182, 127.3778597),
+            new naver.maps.LatLng(36.3519177, 127.3779013),
+            new naver.maps.LatLng(36.3518869, 127.3779006),
+            new naver.maps.LatLng(36.3518874, 127.3778584),
+          ],
+          [//오휘
+            new naver.maps.LatLng(36.3519943,127.3778617),
+            new naver.maps.LatLng(36.3519932,127.3779039),
+            new naver.maps.LatLng(36.351929,127.3779025),
+            new naver.maps.LatLng(36.3519295,127.3778596),
+          ],
+          [//구찌뷰티
+            new naver.maps.LatLng(36.3519928,127.3779228),
+            new naver.maps.LatLng(36.3519923,127.3779718),
+            new naver.maps.LatLng(36.351961,127.3779698),
+            new naver.maps.LatLng(36.3519621,127.3779222),
+          ],
+          [//시세이도
+            new naver.maps.LatLng(36.3519621,127.3779222),
+            new naver.maps.LatLng(36.351961,127.3779698),
+            new naver.maps.LatLng(36.3519275,127.3779698),
+            new naver.maps.LatLng(36.3519286,127.3779208),
+          ],
+          [//입생로랑
+            new naver.maps.LatLng(36.3519912,127.3779906),
+            new naver.maps.LatLng(36.3519912,127.3780335),
+            new naver.maps.LatLng(36.3519253,127.3780308),
+            new naver.maps.LatLng(36.3519269,127.3779899),
+          ],
+          [//이솝
+            new naver.maps.LatLng(36.3519156,127.3779892),
+            new naver.maps.LatLng(36.351914,127.3780308),
+            new naver.maps.LatLng(36.351853,127.3780295),
+            new naver.maps.LatLng(36.3518535,127.3779879),
+          ],
+          [//비오템
+            new naver.maps.LatLng(36.3519902,127.3780516),
+            new naver.maps.LatLng(36.3519902,127.3780871),
+            new naver.maps.LatLng(36.3519535,127.3780858),
+            new naver.maps.LatLng(36.351954,127.3780516),
+          ],
+          [//오피신 유니버셀불
+            new naver.maps.LatLng(36.3518874, 127.3778584),
+            new naver.maps.LatLng(36.3518869,127.3779006),
+            new naver.maps.LatLng(36.3518566,127.3779003),
+            new naver.maps.LatLng(36.3518565,127.3778567),
+          ],
+          [//아베다
+            new naver.maps.LatLng(36.3518869, 127.3779006),
+            new naver.maps.LatLng(36.3518851, 127.377968),
+            new naver.maps.LatLng(36.3518554, 127.3779667),
+            new naver.maps.LatLng(36.3518566, 127.3779003),
+          ],
+          [//나스
+            new naver.maps.LatLng(36.3519177, 127.3779013),
+            new naver.maps.LatLng(36.3519154 , 127.3779693),
+            new naver.maps.LatLng(36.3518851, 127.377968),
+            new naver.maps.LatLng(36.3518869, 127.3779006),
+          ],
+
+
+        ],
+        fillColor: '#EEEEEE',
+        fillOpacity: 1, //투명도
+        strokeColor: '#AAAAAA',
+        strokeOpacity: 0.2,
+        strokeWeight: 3,
+        clickable: true,
+      });
+
+      function dijkstra(graph, start) {
+        var distances = {};
+        var previous = {};
+        var queue = new PriorityQueue();
+
+        for (var node in graph) {
+          distances[node] = Infinity;
+        }
+        distances[start] = 0;
+        queue.enqueue(0, start);
+
+        while (!queue.isEmpty()) {
+          var current = queue.dequeue();
+          var currentDistance = current.priority;
+          var currentNode = current.element;
+
+          if (currentDistance > distances[currentNode]) {
+            continue;
+          }
+
+          for (var adjacentNode in graph[currentNode]) {
+            var weight = graph[currentNode][adjacentNode];
+            var distance = currentDistance + weight;
+
+            if (distance < distances[adjacentNode]) {
+              distances[adjacentNode] = distance;
+              previous[adjacentNode] = currentNode;
+              queue.enqueue(distance, adjacentNode);
+            }
+          }
+        }
+
+        return { distances: distances, previous: previous };
+      }
+
+      function PriorityQueue() {
+        this.elements = [];
+
+        this.enqueue = function (priority, element) {
+          var item = { priority: priority, element: element };
+          var added = false;
+
+          for (var i = 0; i < this.elements.length; i++) {
+            if (item.priority < this.elements[i].priority) {
+              this.elements.splice(i, 0, item);
+              added = true;
+              break;
+            }
+          }
+
+          if (!added) {
+            this.elements.push(item);
+          }
+        };
+
+        this.dequeue = function () {
+          if (this.isEmpty()) {
+            return null;
+          }
+          return this.elements.shift();
+        };
+
+        this.isEmpty = function () {
+          return this.elements.length === 0;
+        };
+      }
+
+      var graph = {
+        E1: {
+          lat: 36.3522963,
+          lng: 127.3784013,
+          E2: 7.593453563872656,
+          F1: 28.049810311341794,
+          R2: 16.85275643621703,
+          D1: 28.75268480670516,
+        },
+        E2: {
+          lat: 36.3522347,
+          lng: 127.3783647,
+          E1: 7.593453563872656,
+          E3: 12.709204954750433,
+          F1: 27.991986046389837,
+          R2: 18.58180563565625,
+          D1: 31.218973784531613,
+        },
+        E3: {
+          lat: 36.3521536,
+          lng: 127.3784647,
+          E2: 12.709204954750433,
+          E4: 6.147096352926488,
+          E19: 5.984065675943224,
+          R2: 18.306495650236673,
+          D1: 24.045574455743633,
+        },
+        E4: {
+          lat: 36.3521044,
+          lng: 127.3784334,
+          E3: 6.147096352926488,
+          E5: 16.107871078086365,
+          E12: 19.13259655960802,
+          E19: 9.936343691780634,
+          F3: 8.310771110605717,
+        },
+        E5: {
+          lat: 36.3521665,
+          lng: 127.3782709,
+          E4: 16.107871078086365,
+          E6: 16.601402548459433,
+          E18: 19.630775922722282,
+        },
+        E6: {
+          lat: 36.3520172,
+          lng: 127.3781763,
+          E5: 16.601402548459433,
+          E7: 28.215597265752898,
+          E13: 16.956938885185036,
+          E18: 5.965247356902635,
+        },
+        E7: {
+          lat: 36.3519945,
+          lng: 127.3778625,
+          E6: 28.215597265752898,
+          E9: 2.0851239410933533,
+        },
+        E8: {
+          lat: 36.3519988,
+          lng: 127.3777291,
+          E9: 9.904978480685099,
+          E20: 4.149356216122425,
+          R1: 9.128919079117521,
+          F2: 10.410875928359445,
+          D2: 11.03443040840565,
+        },
+        E9: {
+          lat: 36.3519983,
+          lng: 127.3778397,
+          E7: 2.0851239410933533,
+          E8: 9.904978480685099,
+          E10: 24.981587392668263,
+          E20: 6.160572717096651,
+        },
+        E10: {
+          lat: 36.3517737,
+          lng: 127.377833,
+          E9: 24.981587392668263,
+          E11: 13.960216340696755,
+        },
+        E11: {
+          lat: 36.3517921,
+          lng: 127.3779872,
+          E10: 13.960216340696755,
+          E15: 15.474643220239507,
+          E16: 13.316326059481332,
+        },
+        E12: {
+          lat: 36.3519513,
+          lng: 127.3783359,
+          E4: 19.13259655960802,
+          E13: 5.880296640728237,
+          E18: 10.097098069902907,
+          F3: 14.30550546370021,
+        },
+        E13: {
+          lat: 36.3519049,
+          lng: 127.3783044,
+          E6: 16.956938885185036,
+          E12: 5.880296640728237,
+          E14: 18.740921302935316,
+          E14: 11.52140651648049,
+        },
+        E14: {
+          lat: 36.3517413,
+          lng: 127.3782541,
+          E13: 18.740921302935316,
+          E15: 9.246061004186126,
+          E17: 4.204780292877599,
+        },
+        E15: {
+          lat: 36.3517721,
+          lng: 127.3781582,
+          E11: 15.474643220239507,
+          E14: 9.246061004186126,
+          E16: 4.972113180773441,
+          E17: 11.40000654313021,
+        },
+        E16: {
+          lat: 36.3517392,
+          lng: 127.3781206,
+          E11: 13.316326059481332,
+          E15: 4.972113180773441,
+          D3: 18.51122311305323,
+        },
+        E17: {
+          lat: 36.3517035,
+          lng: 127.3782528,
+          E14: 4.204780292877599,
+          E15: 11.40000654313021,
+          E19: 55.24120947317008,
+          F3: 41.02372996129727,
+          D3: 7.606344761967489,
+        },
+        E18: {
+          lat: 36.3519923,
+          lng: 127.3782353,
+          E5: 19.630775922722282,
+          E6: 5.965247356902635,
+          E12: 10.097098069902907,
+          E13: 11.52140651648049,
+        },
+        E19: {
+          lat: 36.3521469,
+          lng: 127.378531,
+          E3: 5.984065675943224,
+          E4: 9.936343691780634,
+          E17: 55.24120947317008,
+          F1: 11.739596240810807,
+          F3: 14.217498757382511,
+          R2: 17.30251035283246,
+          D1: 19.05667083908803,
+        },
+        E20: {
+          lat: 36.3520112,
+          lng: 127.3777728,
+          E8: 4.149356216122425,
+          E9: 6.160572717096651,
+          F2: 8.464640102440606,
+          D2: 12.182417395471006,
+        },
+        F1: {
+          lat: 36.352156,
+          lng: 127.3786616,
+          E1: 28.049810311341794,
+          E2: 27.991986046389837,
+          E19: 11.739596240810807,
+          R2: 18.76628662830681,
+          D1: 9.959405230195506,
+        },
+        F2: {
+          lat: 36.3520872,
+          lng: 127.3777674,
+          E8: 10.410875928359445,
+          E20: 8.464640102440606,
+          D2: 8.150810021503867,
+        },
+        F3: {
+          lat: 36.3520327,
+          lng: 127.3784596,
+          E4: 8.310771110605717,
+          E12: 14.30550546370021,
+          E17: 41.02372996129727,
+          E19: 14.217498757382511,
+        },
+        R1: {
+          lat: 36.3519257,
+          lng: 127.3776827,
+          E8: 9.128919079117521,
+          D2: 18.111324066469688,
+        },
+        R2: {
+          lat: 36.3523013,
+          lng: 127.378555,
+          E1: 16.85275643621703,
+          E2: 18.58180563565625,
+          E3: 18.306495650236673,
+          E19: 17.30251035283246,
+          F1: 18.76628662830681,
+          D1: 15.963517903958008,
+        },
+        D1: {
+          lat: 36.3522353,
+          lng: 127.3787133,
+          E1: 28.75268480670516,
+          E2: 31.218973784531613,
+          E3: 24.045574455743633,
+          E19: 19.05667083908803,
+          R2: 15.963517903958008,
+          F1: 9.959405230195506,
+        },
+        D2: {
+          lat: 36.3520885,
+          lng: 127.3776764,
+          E8: 11.03443040840565,
+          E20: 12.182417395471006,
+          R1: 18.111324066469688,
+          F2: 8.150810021503867,
+        },
+        D3: {
+          lat: 36.3516411,
+          lng: 127.3782876,
+          E16: 18.51122311305323,
+          E17: 7.606344761967489,
+        },
+      };
+
+// 경로 보이게 하기
+function drawPath(pathCoordinates, color) {
+        var path = new naver.maps.Polyline({
+          map: map,
+          path: pathCoordinates,
+          strokeColor: color,
+          strokeWeight: 2,
+        });
+      }
+
+    // 위치 선택 이벤트 처리
+    naver.maps.Event.addListener(map, 'click', function (e) {
+      var selectedPosition = e.coord; // 선택한 위치의 좌표
+
+      // 가장 가까운 노드 찾기
+      var closestNode = null;
+      var closestDistance = Infinity;
+
+      for (var node in graph) {
+        var nodeLat = graph[node].lat;
+        var nodeLng = graph[node].lng;
+        var distance = calculateDistance(
+          selectedPosition.lat(),
+          selectedPosition.lng(),
+          nodeLat,
+          nodeLng
+        );
+
+        if (distance < closestDistance) {
+          closestNode = node;
+          closestDistance = distance;
+        }
+      }
+
+      if (closestNode) {//
+        var startNode = closestNode;
+        var result = dijkstra(graph, startNode);
+        var distances = result.distances;
+        var previous = result.previous;
+
+        // 추천 경로 계산과 출력
+        var exitNodes = ['D1', 'D2', 'D3'];
+        var fastestPathWithAllExits = Infinity;
+        var pathWithAllExits = null;
+
+        for (var i = 0; i < exitNodes.length; i++) {
+        var exitNode = exitNodes[i];
+        if (distances.hasOwnProperty(exitNode)) {
+          var distanceToExit = distances[exitNode];
+          if (distanceToExit < fastestPathWithAllExits) {
+            fastestPathWithAllExits = distanceToExit;
+            pathWithAllExits = [exitNode];
+
+            var currentNode = exitNode;
+            while (currentNode !== startNode) {
+              currentNode = previous[currentNode];
+              pathWithAllExits.unshift(currentNode);
+            }
+          }
+        }
+      }
+
+        console.log(
+          '최단 경로(모든 출구 포함): ' + fastestPathWithAllExits.toFixed(1)
+        );
+        console.log('경로: ' + pathWithAllExits.join(' -> '));
+
+        var fireExtinguisherNodes = ['F1', 'F2', 'F3'];
+        var fastestPathWithFireExtinguishers = Infinity;
+        var pathWithFireExtinguishers = null;
+
+        for (var i = 0; i < fireExtinguisherNodes.length; i++) {
+        var node = fireExtinguisherNodes[i];
+        if (distances.hasOwnProperty(node)) {
+          var distanceToNode = distances[node];
+          var distanceThroughNode = distanceToNode + distances[startNode];
+          if (distanceThroughNode < fastestPathWithFireExtinguishers) {
+            fastestPathWithFireExtinguishers = distanceThroughNode;
+            pathWithFireExtinguishers = [node];
+
+            var currentNode = node;
+            while (currentNode !== startNode) {
+              currentNode = previous[currentNode];
+              pathWithFireExtinguishers.unshift(currentNode);
+            }
+          }
+        }
+      }
+
+        console.log(
+          '최단 경로(소화기 포함): ' + fastestPathWithFireExtinguishers.toFixed(1)
+        );
+        console.log('경로: ' + pathWithFireExtinguishers.join(' -> '));
+
+        //화장실 경로
+      var restroomExtinguisherNodes = ['R1', 'R2'];
+      var fastestPathWithRestroomExtinguishers = Infinity;
+      var pathWithRestroomExtinguishers = null;
+
+      for (var i = 0; i < restroomExtinguisherNodes.length; i++) {
+        var nodetwo = restroomExtinguisherNodes[i];
+        if (distances.hasOwnProperty(nodetwo)) {
+          var distanceToNode = distances[nodetwo];
+          var distanceThroughNode = distanceToNode + distances[startNode];
+          if (distanceThroughNode < fastestPathWithRestroomExtinguishers) {
+            fastestPathWithRestroomExtinguishers = distanceThroughNode;
+            pathWithRestroomExtinguishers = [nodetwo];
+
+            var currentNode = nodetwo;
+            while (currentNode !== startNode) {
+              currentNode = previous[currentNode];
+              pathWithRestroomExtinguishers.unshift(currentNode);
+            }
+          }
+        }
+      }
+
+      console.log(
+        '최단 경로(화장실): ' + fastestPathWithRestroomExtinguishers.toFixed(1)
+      );
+      console.log('경로: ' + pathWithRestroomExtinguishers.join(' -> '));
+
+        // 기존 경로 선 삭제
+        map.data.forEach(function (feature) {
+          map.data.remove(feature);
+        });
+      // 최단 경로💙
+      var exitPathCoordinates = [];
+      for (var i = 0; i < pathWithAllExits.length; i++) {
+        var node = pathWithAllExits[i];
+        exitPathCoordinates.push(
+          new naver.maps.LatLng(graph[node].lat, graph[node].lng)
+        );
+      }
+      drawPath(exitPathCoordinates, '#0000FF'); // 파란색
+
+      // 소화기 경로 🧯
+      var fireExtinguisherPathCoordinates = [];
+      for (var i = 0; i < pathWithFireExtinguishers.length; i++) {
+        var node = pathWithFireExtinguishers[i];
+        fireExtinguisherPathCoordinates.push(
+          new naver.maps.LatLng(graph[node].lat, graph[node].lng)
+        );
+      }
+      drawPath(fireExtinguisherPathCoordinates, '#FF0000');
+      // 화장실 경로 🚻
+      var restroomExtinguisherPathCoordinates = [];
+      for (var i = 0; i < pathWithRestroomExtinguishers.length; i++) {
+        var node = pathWithRestroomExtinguishers[i];
+        restroomExtinguisherPathCoordinates.push(
+          new naver.maps.LatLng(graph[node].lat, graph[node].lng)
+        );
+      }
+      drawPath(restroomExtinguisherPathCoordinates, '#99CC00');
+      }
+    });
+
+    // 거리 계산 
+    function calculateDistance(lat1, lng1, lat2, lng2) {
+      var radLat1 = (Math.PI * lat1) / 180;
+      var radLat2 = (Math.PI * lat2) / 180;
+      var theta = lng1 - lng2;
+      var radTheta = (Math.PI * theta) / 180;
+      var dist =
+        Math.sin(radLat1) * Math.sin(radLat2) +
+        Math.cos(radLat1) * Math.cos(radLat2) * Math.cos(radTheta);
+      dist = Math.acos(dist);
+      dist = (dist * 180) / Math.PI;
+      dist = dist * 60 * 1.1515 * 1.609344; // km로 변환
+      return dist;
+    }
+
+
+
+    </script>
+  </body>
+</html>
