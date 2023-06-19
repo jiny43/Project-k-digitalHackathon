@@ -7,17 +7,31 @@
     <title>대피로안내지도</title>
     <script
       type="text/javascript"
-      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ID입력"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vvgbajtb3h"
     ></script>
     <style>
       #map {
         width: 100%;
         height: 844px;
       }
+      #controlPanel {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        background-color: white;
+        padding: 10px;
+      }
     </style>
   </head>
   <body>
     <div id="map"></div>
+    <div id="controlPanel">
+      <button onclick="showShortestPath()">최단경로</button>
+      <button onclick="showFireExtinguisherPath()">소화기 경로</button>
+      <button onclick="showRestroomPath()">화장실 경로</button>
+      <button onclick="showHydrantPath()">완강기 경로</button>
+    </div>
 
     <script>
       var mapOptions = {
