@@ -7,7 +7,7 @@
     <title>대피로안내지도</title>
     <script
       type="text/javascript"
-      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vvgbajtb3h"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=id입력"
     ></script>
     <style>
       #map {
@@ -27,11 +27,12 @@
   <body>
     <div id="map"></div>
     <div id="controlPanel">
-      <button onclick="showShortestPath()">최단경로</button>
-      <button onclick="showFireExtinguisherPath()">소화기 경로</button>
-      <button onclick="showRestroomPath()">화장실 경로</button>
-      <button onclick="showHydrantPath()">완강기 경로</button>
+      <button onclick="showShortestPath()">최단경로✅</button>
+      <button onclick="showFireExtinguisherPath()">소화기 경로🧯</button>
+      <button onclick="showRestroomPath()">화장실 경로🚻</button>
+      <button onclick="showHydrantPath()">완강기 경로🚨</button>
     </div>
+
 
     <script>
 
@@ -962,6 +963,70 @@
           position: new naver.maps.LatLng(36.3520692, 127.3779661),
           text: '수트서플라이',
         },
+        {
+          position: new naver.maps.LatLng(36.3519417,127.3777403),
+          text: '구찌',
+        },
+        /* {
+          position: new naver.maps.LatLng(36.3519652,127.3778707),
+          text: '오휘앤후',
+        },
+        {
+          position: new naver.maps.LatLng(36.3519593,127.3779958),
+          text: '입생로랑',
+        }, */
+        {
+          position: new naver.maps.LatLng(36.3519026,127.3779063),
+          text: '나스',
+        },
+        {
+          position: new naver.maps.LatLng(36.35172,127.3779732),
+          text: '티파니앤코',
+        },
+        {
+          position: new naver.maps.LatLng(36.3519473,127.3784451),
+          text: '루이비통',
+        },
+        {
+          position: new naver.maps.LatLng(36.3519515,127.3781133),
+          text: '샤넬',
+        },
+        {
+          position: new naver.maps.LatLng(36.3521247,127.3781732),
+          text: '프라다',
+        },
+        {
+          position: new naver.maps.LatLng(36.3521988,127.3782939),
+          text: '델보',
+        },
+        {
+          position: new naver.maps.LatLng(36.3523009,127.3782878),
+          text: '페라가모',
+        },
+        {
+          position: new naver.maps.LatLng(36.3520175,127.3782555),
+          text: '설화수',
+        },
+        {
+          position: new naver.maps.LatLng(36.3518217,127.3783329),
+          text: '디올',
+        },
+        {
+          position: new naver.maps.LatLng(36.3516929,127.3780739),
+          text: '키엘',
+        },
+        {
+          position: new naver.maps.LatLng(36.3518853,127.3782911),
+          text: '시슬리',
+        },
+        {
+          position: new naver.maps.LatLng(36.352114,127.3785109),
+          text: '록시땅',
+        },
+        {
+          position: new naver.maps.LatLng(36.3517097,127.3783215),
+          text: 'MAC',
+        },
       ];
 
       // 스타일
@@ -970,7 +1035,7 @@
         height: '40px',
         color: '#000000',
         textAlign: 'center',
-        fontSize: '12px',
+        fontSize: '10px',
         fontWeight: 'bold',
         lineHeight: '40px',
       };
