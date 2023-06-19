@@ -662,10 +662,16 @@
         });
         return path; //수정함.
       }
-      var currentPath = null; //수정함.
+      var currentPath = null;
+      var currentCircle = null;
+
       // 위치 선택 이벤트
       naver.maps.Event.addListener(map, 'click', function (e) {
         var selectedPosition = e.coord; // 선택한 위치의 좌표
+        // 이전에 그려진 원 제거
+        if (currentCircle) {
+          currentCircle.setMap(null);
+        }
         // 클릭한 위치에 원 생성
         var circle = new naver.maps.Circle({
           map: map,
@@ -806,6 +812,7 @@
           }
           // drawPath(exitPathCoordinates, '#0000FF'); // 파란색
           currentPath = drawPath(exitPathCoordinates, '#0000FF'); // 파란색 위를 지우고 수정함
+          currentCircle = circle;
 
           // 소화기 경로 🧯
           var fireExtinguisherPathCoordinates = [];
