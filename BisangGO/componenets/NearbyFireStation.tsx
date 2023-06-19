@@ -9,11 +9,15 @@ const styles = StyleSheet.create({
     height: '100%',
     display: 'flex',
     // justifyContent: 'center',
-    // alignItems: 'center',
+    justifyContent: 'space-around',
+    alignItems: 'center',
     flexDirection: 'row',
   },
   text: {
     color: 'black',
+  },
+  text2: {
+    color: 'gray',
   },
   leftContainer: {
     width: '20%',
@@ -36,7 +40,7 @@ const NearbyFireStation = () => {
       </View>
       <View>
         <Text style={styles.text}>대전 둔산 소방서</Text>
-        <Text style={styles.text}>가장 가까운 소방서</Text>
+        <Text style={styles.text2}>가장 가까운 소방서</Text>
       </View>
       <View>
         <Image source={require('../img/Group.png')} />

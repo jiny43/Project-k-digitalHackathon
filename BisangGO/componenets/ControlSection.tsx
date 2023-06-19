@@ -43,12 +43,30 @@ const styles = StyleSheet.create({
     width: '96%',
     height: '80%',
     backgroundColor: '#FFF',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
   overlayText: {
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  TopSection: {
+    width: '100%',
+    height: '20%',
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  meddleSection: {
+    width: '100%',
+    height: '10%',
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  bottomSection: {
+    width: '100%',
+    height: '10%',
+    display: 'flex',
+    flexDirection: 'row',
   },
 });
 
@@ -96,9 +114,15 @@ const ControlSection = () => {
       style={[styles.controlSection, {top: controlSectionTop}]} // ControlSection의 상단 위치 조정
       {...panResponder.panHandlers} // PanResponder 이벤트 핸들러 추가
     >
-      <NearbyFireStation></NearbyFireStation>
-      {/* <CurrentLocation></CurrentLocation> */}
-      {/* <ExpectedTime></ExpectedTime> */}
+      <View style={[styles.TopSection]}>
+        <NearbyFireStation></NearbyFireStation>
+      </View>
+      <View style={[styles.meddleSection]}>
+        <CurrentLocation></CurrentLocation>
+      </View>
+      <View style={[styles.bottomSection]}>
+        <ExpectedTime></ExpectedTime>
+      </View>
     </Animated.View>
   );
 };

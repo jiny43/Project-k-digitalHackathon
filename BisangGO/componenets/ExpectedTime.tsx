@@ -14,15 +14,20 @@ const styles = StyleSheet.create({
   text: {
     color: 'black',
   },
+  text2: {
+    color: 'gray',
+  },
   leftContainer: {
     width: '20%',
     display: 'flex',
     alignItems: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
     // flexDirection: 'row',
   },
   rightContainer: {
     width: '80%',
+    display: 'flex',
+    // alignItems: 'center',
     // flexDirection: 'row',
   },
 });
@@ -34,7 +39,7 @@ const ExpectedTime = () => {
         <Image source={require('../img/Group1.png')} />
       </View>
       <View style={styles.rightContainer}>
-        <Text style={styles.text}>예상 출동 시간</Text>
+        <Text style={styles.text2}>예상 출동 시간</Text>
         <Text style={styles.text}>5min</Text>
       </View>
     </View>

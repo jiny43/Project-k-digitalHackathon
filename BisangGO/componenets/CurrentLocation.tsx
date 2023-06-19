@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
   text: {
     color: 'black',
   },
+  text2: {
+    color: 'gray',
+  },
   leftContainer: {
     width: '20%',
     display: 'flex',
@@ -33,7 +36,7 @@ const CurrentLocation = () => {
         <Image source={require('../img/Group2.png')} />
       </View>
       <View style={styles.rightContainer}>
-        <Text style={styles.text}>현재 내 위치</Text>
+        <Text style={styles.text2}>현재 내 위치</Text>
         <Text style={styles.text}>갤러리아 타임월드</Text>
       </View>
     </View>
