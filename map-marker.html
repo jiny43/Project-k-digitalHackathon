@@ -7,7 +7,7 @@
     <title>대피로안내지도</title>
     <script
       type="text/javascript"
-      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=id입력"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=eq0arf5bzy"
     ></script>
     <style>
       #map {
@@ -828,6 +828,28 @@ markers.forEach(function (markerInfo) {
     ),
   });
 });
+ // 사용자 위치
+ navigator.geolocation.getCurrentPosition(function (position) {
+        var userLatLng = new naver.maps.LatLng(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+
+        // 사용자 위치(디자인)
+        var circle = new naver.maps.Circle({
+          map: map,
+          center: userLatLng,
+          radius: 2, 
+          fillColor: '#0072FF', 
+          fillOpacity: 0.3,
+          strokeColor: '#0072FF', 
+          strokeOpacity: 0.6,
+          strokeWeight: 2,
+        });
+
+        // 지도 중심 위치를 사용자의 위치로 이동
+        map.setCenter(userLatLng);
+      });
 
 
 
