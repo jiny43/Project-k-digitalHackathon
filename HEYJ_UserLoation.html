@@ -19,7 +19,7 @@
   <body>
     <div id="map"></div>
     <script>
-      //탈출구, 소화기, 화장실 마커 표시
+      //탈출구, 소화기, 화장실 마커 표시 📍
       var HOME_PATH = window.HOME_PATH || '.';
       var door1 = new naver.maps.LatLng(36.3522353, 127.3787133);
       var door2 = new naver.maps.LatLng(36.3520885, 127.3776764);
@@ -942,8 +942,8 @@ markers.forEach(function (markerInfo) {
     ),
   });
 });
- // 사용자 위치
- navigator.geolocation.getCurrentPosition(function (position) {
+        // 사용자 위치 👤
+        navigator.geolocation.getCurrentPosition(function (position) {
         var userLatLng = new naver.maps.LatLng(
           position.coords.latitude,
           position.coords.longitude

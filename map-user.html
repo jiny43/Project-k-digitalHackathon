@@ -7,7 +7,7 @@
     <title>대피로안내지도</title>
     <script
       type="text/javascript"
-      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vvgbajtb3h"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ID입력"
     ></script>
     <style>
       #map {
@@ -648,11 +648,22 @@
         });
       }
 
-      // 위치 선택 이벤트 처리
+      // 위치 선택 이벤트
       naver.maps.Event.addListener(map, 'click', function (e) {
         var selectedPosition = e.coord; // 선택한 위치의 좌표
+        // 클릭한 위치에 원 생성
+        var circle = new naver.maps.Circle({
+          map: map,
+          center: selectedPosition,
+          radius: 2,
+          fillColor: '#0072FF',
+          fillOpacity: 0.3,
+          strokeColor: '#0072FF',
+          strokeOpacity: 0.6,
+          strokeWeight: 2,
+        });
 
-        // 가장 가까운 노드 찾기
+        // 가장 가까운 길 추천
         var closestNode = null;
         var closestDistance = Infinity;
 
@@ -797,6 +808,7 @@
         }
       });
 
+      // 사용자 위치 클릭하면 보이게 하기(비콘이 안될경우)
       // 거리 계산
       function calculateDistance(lat1, lng1, lat2, lng2) {
         var radLat1 = (Math.PI * lat1) / 180;
