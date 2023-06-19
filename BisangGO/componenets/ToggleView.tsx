@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 
 import SOSBox from "./SOSBox";
-import SobangchaBox from "./sobangchaBox";
+import SobangchaBox from "./SobangchaBox";
 
 
 export default function ToggleView() {
