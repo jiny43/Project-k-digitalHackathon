@@ -12,11 +12,12 @@ const AppleMap = () => {
       <MapView
         style={{flex: 1}}
         initialRegion={{
-          latitude: 36.3504,
-          longitude: 127.3845,
+          latitude: 40.7626,
+          longitude: -73.9712,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
+        mapType="mutedStandard" // 실내지도 정보를 표시
       />
     </Container>
   );

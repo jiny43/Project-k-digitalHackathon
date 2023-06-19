@@ -43,6 +43,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     justifyContent: 'center',
     alignItems: 'center',
+<<<<<<< HEAD
+=======
+    borderRadius: 20,
+>>>>>>> heeeun1207/issue18
   },
   overlayText: {
     fontSize: 20,

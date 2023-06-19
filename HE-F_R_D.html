@@ -1,0 +1,72 @@
+<!-- 소화기 이미지 마커 표시-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마커표시</title>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vvgbajtb3h"
+    ></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      var HOME_PATH = window.HOME_PATH || '.';
+      var position = new naver.maps.LatLng(36.3522353, 127.3787133);
+      var position2 = new naver.maps.LatLng(36.3517721, 127.3781582);
+
+      var map = new naver.maps.Map('map', {
+        center: position,
+        zoom: 19,
+        zoomControl: false
+      });
+
+      var markerOptions = {
+        position: position,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/Door.png',
+          size: new naver.maps.Size(100, 100),
+          origin: new naver.maps.Point(0, 0),
+          anchor: new naver.maps.Point(50, 50)
+        }
+      };
+
+      var markerOptions2 = {
+        position: position2,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/beacon.png',
+          size: new naver.maps.Size(100, 100),
+          origin: new naver.maps.Point(0, 0),
+          anchor: new naver.maps.Point(50, 50)
+        }
+      };
+
+      var image = new Image();
+      var image2 = new Image();
+
+      image.onload = function() {
+        markerOptions.icon.url = HOME_PATH + '/img/example/Door.png';
+        var marker = new naver.maps.Marker(markerOptions);
+      };
+      image.src = markerOptions.icon.url;
+
+      image2.onload = function() {
+        markerOptions2.icon.url = HOME_PATH + '/img/example/beacon.png';
+        var marker2 = new naver.maps.Marker(markerOptions2);
+      };
+      image2.src = markerOptions2.icon.url;
+    </script>
+  </body>
+</html>
