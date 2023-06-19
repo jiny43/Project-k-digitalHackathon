@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대피로 안내 지도</title>
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vvgbajtb3h"
+    ></script>
+    <style>
+      #map {
+        width: 100%;
+        height: 844px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      //탈출구, 소화기, 화장실 마커 표시
+      var HOME_PATH = window.HOME_PATH || '.';
+      var door1 = new naver.maps.LatLng(36.3522353, 127.3787133);
+      var door2 = new naver.maps.LatLng(36.3520885, 127.3776764);
+      var door3 = new naver.maps.LatLng(36.3516411, 127.3782876);
+      var fire1 = new naver.maps.LatLng(36.352156, 127.3786616);
+      var fire2 = new naver.maps.LatLng(36.3520872, 127.3777674);
+      var fire3 = new naver.maps.LatLng(36.3520327, 127.3784596);
+      var restroom1 = new naver.maps.LatLng(36.3519257, 127.3776827);
+      var restroom2 = new naver.maps.LatLng(36.3523013, 127.378555);
+
+      var map = new naver.maps.Map('map', {
+        center: door1,
+        zoomControl: false
+      });
+
+      var markerOptions = {
+        position: door1,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/Door.png',
+          size: new naver.maps.Size(50, 50),
+          scaledSize: new naver.maps.Size(50, 50)
+        }
+      };
+
+      var markerOptions2 = {
+        position: door2,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/Door.png',
+          size: new naver.maps.Size(50, 50),
+          scaledSize: new naver.maps.Size(50, 50)
+        }
+      };
+
+      var markerOptions3 = {
+        position: door3,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/Door.png',
+          size: new naver.maps.Size(50, 50),
+          scaledSize: new naver.maps.Size(50, 50)
+        }
+      };
+
+      var markerOptions4 = {
+        position: fire1,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/fire-extinguisher.png',
+          size: new naver.maps.Size(50, 50),
+          scaledSize: new naver.maps.Size(50, 50)
+        }
+      };
+
+      var markerOptions5 = {
+        position: fire2,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/fire-extinguisher.png',
+          size: new naver.maps.Size(50, 50),
+          scaledSize: new naver.maps.Size(50, 50)
+        }
+      };
+
+      var markerOptions6 = {
+
+
+        position: fire3,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/fire-extinguisher.png',
+          size: new naver.maps.Size(50, 50),
+          scaledSize: new naver.maps.Size(50, 50)
+        }
+      };
+
+      var markerOptions7 = {
+        position: restroom1,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/restroom.png',
+          size: new naver.maps.Size(50, 50),
+          scaledSize: new naver.maps.Size(50, 50)
+        }
+      };
+
+      var markerOptions8 = {
+        position: restroom2,
+        map: map,
+        icon: {
+          url: HOME_PATH + '/img/example/restroom.png',
+          size: new naver.maps.Size(50, 50),
+          scaledSize: new naver.maps.Size(50, 50)
+        }
+      };
+
+      var marker = new naver.maps.Marker(markerOptions);
+      var marker2 = new naver.maps.Marker(markerOptions2);
+      var marker3 = new naver.maps.Marker(markerOptions3);
+      var marker4 = new naver.maps.Marker(markerOptions4);
+      var marker5 = new naver.maps.Marker(markerOptions5);
+      var marker6 = new naver.maps.Marker(markerOptions6);
+      var marker7 = new naver.maps.Marker(markerOptions7);
+      var marker8 = new naver.maps.Marker(markerOptions8);
+
+      var markerList = [marker, marker2, marker3, marker4, marker5, marker6, marker7, marker8];
+
+      // 실내 매장 폴리곤 생성
+      var polygon = new naver.maps.Polygon({
+        map: map,
+        paths: [
+          [//롤렉스
+            new naver.maps.LatLng(36.3520875, 127.3777705),
+            new naver.maps.LatLng(36.3520897, 127.3778833),
+            new naver.maps.LatLng(36.352012, 127.3778869),
+            new naver.maps.LatLng(36.3520083, 127.3777723) ,
+          ],
+          [//튜더
+            new naver.maps.LatLng(36.3520897, 127.3778833),
+            new naver.maps.LatLng(36.3520908,127.3779513),
+            new naver.maps.LatLng(36.3520167,127.3779539) , 
+            new naver.maps.LatLng(36.352012, 127.3778869),
+          ],
+          [//수트서플라이
+            new naver.maps.LatLng(36.3520908,127.3779513),
+            new naver.maps.LatLng(36.3520912,127.3780659),            
+            new naver.maps.LatLng(36.3520156,127.3780679) , 
+            new naver.maps.LatLng(36.3520167,127.3779539) , 
+          ],
+          [//브라이틀링
+            new naver.maps.LatLng(36.3520912,127.3780659),            
+            new naver.maps.LatLng(36.3520896,127.3780987),
+            new naver.maps.LatLng(36.3520183,127.3781751) , 
+            new naver.maps.LatLng(36.3520156,127.3780679) , 
+          ],
+          // fix
+          [//프라다 왼쪽 매장
+          new naver.maps.LatLng(36.3520896,127.3780987),
+            new naver.maps.LatLng(36.3520928,127.3781435),         
+            new naver.maps.LatLng(36.3521014,127.3781462) ,
+            new naver.maps.LatLng(36.3520755,127.3782106) , 
+            new naver.maps.LatLng(36.3520183,127.3781751) , 
+          ],
+          [//프라다
+          new naver.maps.LatLng(36.3521014,127.3781462) ,
+            new naver.maps.LatLng(36.3521957,127.3782096),
+            new naver.maps.LatLng(36.352171,127.3782709) , 
+            new naver.maps.LatLng(36.3520755,127.3782106) , 
+          ],
+          [//페라가모
+            new naver.maps.LatLng(36.3522768,127.3782561),
+            new naver.maps.LatLng(36.3522346,127.3783628) ,
+            new naver.maps.LatLng(36.3522967,127.3784013) , 
+            new naver.maps.LatLng(36.3523373,127.3782946) , 
+          ],
+          [//델보
+            new naver.maps.LatLng(36.3521957,127.3782096),
+            new naver.maps.LatLng(36.3521033,127.37843) ,
+            new naver.maps.LatLng(36.3521495,127.3784616) , 
+            new naver.maps.LatLng(36.3522434,127.3782353) , 
+          ],
+          [//티파니앤코
+            new naver.maps.LatLng(36.3517853, 127.3779617),
+            new naver.maps.LatLng(36.3517912, 127.3779863),
+            new naver.maps.LatLng(36.3517463, 127.3780993),
+            new naver.maps.LatLng(36.3516579, 127.3780436),
+            new naver.maps.LatLng(36.3516843, 127.3779609),
+          ], 
+          [//샤넬
+            new naver.maps.LatLng(36.3519903, 127.3781325),
+            new naver.maps.LatLng(36.351989, 127.3781816),
+            new naver.maps.LatLng(36.3518885, 127.3781208),
+            new naver.maps.LatLng(36.3519054,127.3780811),
+          ], 
+            [//바이레도
+            new naver.maps.LatLng(36.3519054, 127.3780811),
+            new naver.maps.LatLng(36.3518885, 127.3781208),
+            new naver.maps.LatLng(36.3518166, 127.378077),
+            new naver.maps.LatLng(36.3518322, 127.3780369),
+          ], 
+            [//키엘
+            new naver.maps.LatLng(36.3517454, 127.3780996),
+            new naver.maps.LatLng(36.3516554, 127.378043),
+            new naver.maps.LatLng(36.3516359, 127.3780976),
+            new naver.maps.LatLng(36.3516326, 127.3781219),
+            new naver.maps.LatLng(36.3516749, 127.3781488),
+            new naver.maps.LatLng(36.3516966, 127.3780969),
+            new naver.maps.LatLng(36.3517362, 127.3781198),
+          ],
+            [//조말론
+            new naver.maps.LatLng(36.3516755, 127.3781489),
+            new naver.maps.LatLng(36.351663, 127.3781786),
+            new naver.maps.LatLng(36.3516505, 127.3781833), 
+            new naver.maps.LatLng(36.3516272, 127.3781676),
+            new naver.maps.LatLng(36.3516272, 127.3781401),
+            new naver.maps.LatLng(36.3516315, 127.3781213),
+          ], 
+            [//젠틀몬스터
+            new naver.maps.LatLng(36.3517719, 127.3781602),
+            new naver.maps.LatLng(36.3517633, 127.378179),
+            new naver.maps.LatLng(36.3517244, 127.3781548),
+            new naver.maps.LatLng(36.3517325, 127.3781341), 
+          ], 
+          
+            [//바비브라운
+            new naver.maps.LatLng(36.3517275, 127.3781938),
+            new naver.maps.LatLng(36.3517183, 127.3782126),
+            new naver.maps.LatLng(36.3517107, 127.378232),
+            new naver.maps.LatLng(36.3516713, 127.3782058), 
+            new naver.maps.LatLng(36.3516783, 127.3781897), 
+            new naver.maps.LatLng(36.351688, 127.3781696), 
+          ], 
+          [
+            new naver.maps.LatLng(36.3520334, 127.3784607),
+            new naver.maps.LatLng(36.3519934, 127.3785599),
+            new naver.maps.LatLng(36.3518158, 127.3784479),
+            new naver.maps.LatLng(36.3518562, 127.37835),
+          ],
+          [
+            new naver.maps.LatLng(36.3521462, 127.378531),
+            new naver.maps.LatLng(36.3521343, 127.3785598),
+            new naver.maps.LatLng(36.3520219, 127.3784893),
+            new naver.maps.LatLng(36.3520334, 127.3784607),
+          ],
+          [
+            new naver.maps.LatLng(36.3518315, 127.3784103),
+            new naver.maps.LatLng(36.3518158, 127.3784479),
+            new naver.maps.LatLng(36.3517753, 127.3784238),
+            new naver.maps.LatLng(36.351792, 127.3783856),
+          ],
+          [//설화수
+            new naver.maps.LatLng(36.3520253, 127.3782558),
+            new naver.maps.LatLng(36.3519934, 127.3782343),
+            new naver.maps.LatLng(36.351974, 127.3782859),
+            new naver.maps.LatLng(36.3520053, 127.3783053),
+          ],
+          [//헤라
+            new naver.maps.LatLng(36.3520053, 127.3783053),
+            new naver.maps.LatLng(36.351974, 127.3782859),
+            new naver.maps.LatLng(36.3519535, 127.3783348),
+            new naver.maps.LatLng(36.3519854, 127.3783542),
+          ],
+          [//딥디크
+            new naver.maps.LatLng(36.3521053, 127.3783066),
+            new naver.maps.LatLng(36.3520745, 127.3782858),
+            new naver.maps.LatLng(36.352034, 127.3783857),
+            new naver.maps.LatLng(36.3520659, 127.3784051),
+          ],
+          [//산타마리아노벨라
+            new naver.maps.LatLng(36.3520745, 127.3782858),
+            new naver.maps.LatLng(36.3520425, 127.3782637),
+            new naver.maps.LatLng(36.3520214, 127.3783153),
+            new naver.maps.LatLng(36.3520549, 127.3783361),
+          ],
+          [//겔랑
+            new naver.maps.LatLng(36.3520549, 127.3783361),
+            new naver.maps.LatLng(36.3520214, 127.3783153),
+            new naver.maps.LatLng(36.3520025, 127.3783656),
+            new naver.maps.LatLng(36.352034, 127.3783857),
+          ],
+          [//시슬리
+            new naver.maps.LatLng(36.3519047, 127.3783053),
+            new naver.maps.LatLng(36.351834, 127.3782604),
+            new naver.maps.LatLng(36.3518162, 127.3783),
+            new naver.maps.LatLng(36.351888, 127.3783456),
+          ],
+          [//에스티로더
+            new naver.maps.LatLng(36.351834, 127.3782604),
+            new naver.maps.LatLng(36.3517595, 127.3782142),
+            new naver.maps.LatLng(36.3517438, 127.3782538),
+            new naver.maps.LatLng(36.3518162, 127.3783),
+          ],
+          [//디올
+            new naver.maps.LatLng(36.3518475, 127.378345),
+            new naver.maps.LatLng(36.3517924, 127.3783095),
+            new naver.maps.LatLng(36.3517762, 127.3783497),
+            new naver.maps.LatLng(36.3518313, 127.3783846),
+          ],
+          [//라메르
+            new naver.maps.LatLng(36.3517827, 127.3783035),
+            new naver.maps.LatLng(36.35176, 127.3782894),
+            new naver.maps.LatLng(36.3517433, 127.378329),
+            new naver.maps.LatLng(36.3517665, 127.3783444),
+          ],
+          [//톰포드뷰티
+            new naver.maps.LatLng(36.35176, 127.3782894),
+            new naver.maps.LatLng(36.3517022, 127.3782546),
+            new naver.maps.LatLng(36.3516871, 127.3782942),
+            new naver.maps.LatLng(36.3517433, 127.378329),
+          ],
+          [//MAC
+            new naver.maps.LatLng(36.3517324, 127.3783368),
+            new naver.maps.LatLng(36.351659, 127.3782892),
+            new naver.maps.LatLng(36.3516698, 127.3783321),
+            new naver.maps.LatLng(36.351693, 127.3783629),
+            new naver.maps.LatLng(36.3517119, 127.3783823),
+          ],
+          [//구찌
+            new naver.maps.LatLng(36.3519976,127.3777282),
+            new naver.maps.LatLng(36.3519971,127.3778375),
+            new naver.maps.LatLng(36.351774,127.3778302),
+            new naver.maps.LatLng(36.3517767,127.3777759),
+            new naver.maps.LatLng(36.3517492,127.3777759),
+            new naver.maps.LatLng(36.3517649,127.3777316),
+          ],
+          [//까르디에
+            new naver.maps.LatLng(36.3517767,127.3777759),
+            new naver.maps.LatLng(36.351774,127.3778302),
+            new naver.maps.LatLng(36.3517875,127.3779623),
+            new naver.maps.LatLng(36.3516843,127.3779603),
+            new naver.maps.LatLng(36.3517492,127.3777759),
+          ],
+          [//유겐
+            new naver.maps.LatLng(36.3519182, 127.3778597),
+            new naver.maps.LatLng(36.3519177, 127.3779013),
+            new naver.maps.LatLng(36.3518869, 127.3779006),
+            new naver.maps.LatLng(36.3518874, 127.3778584),
+          ],
+          [//오휘
+            new naver.maps.LatLng(36.3519943,127.3778617),
+            new naver.maps.LatLng(36.3519932,127.3779039),
+            new naver.maps.LatLng(36.351929,127.3779025),
+            new naver.maps.LatLng(36.3519295,127.3778596),
+          ],
+          [//구찌뷰티
+            new naver.maps.LatLng(36.3519928,127.3779228),
+            new naver.maps.LatLng(36.3519923,127.3779718),
+            new naver.maps.LatLng(36.351961,127.3779698),
+            new naver.maps.LatLng(36.3519621,127.3779222),
+          ],
+          [//시세이도
+            new naver.maps.LatLng(36.3519621,127.3779222),
+            new naver.maps.LatLng(36.351961,127.3779698),
+            new naver.maps.LatLng(36.3519275,127.3779698),
+            new naver.maps.LatLng(36.3519286,127.3779208),
+          ],
+          [//입생로랑
+            new naver.maps.LatLng(36.3519912,127.3779906),
+            new naver.maps.LatLng(36.3519912,127.3780335),
+            new naver.maps.LatLng(36.3519253,127.3780308),
+            new naver.maps.LatLng(36.3519269,127.3779899),
+          ],
+          [//이솝
+            new naver.maps.LatLng(36.3519156,127.3779892),
+            new naver.maps.LatLng(36.351914,127.3780308),
+            new naver.maps.LatLng(36.351853,127.3780295),
+            new naver.maps.LatLng(36.3518535,127.3779879),
+          ],
+          [//비오템
+            new naver.maps.LatLng(36.3519902,127.3780516),
+            new naver.maps.LatLng(36.3519902,127.3780871),
+            new naver.maps.LatLng(36.3519535,127.3780858),
+            new naver.maps.LatLng(36.351954,127.3780516),
+          ],
+          [//오피신 유니버셀불
+            new naver.maps.LatLng(36.3518874, 127.3778584),
+            new naver.maps.LatLng(36.3518869,127.3779006),
+            new naver.maps.LatLng(36.3518566,127.3779003),
+            new naver.maps.LatLng(36.3518565,127.3778567),
+          ],
+          [//아베다
+            new naver.maps.LatLng(36.3518869, 127.3779006),
+            new naver.maps.LatLng(36.3518851, 127.377968),
+            new naver.maps.LatLng(36.3518554, 127.3779667),
+            new naver.maps.LatLng(36.3518566, 127.3779003),
+          ],
+          [//나스
+            new naver.maps.LatLng(36.3519177, 127.3779013),
+            new naver.maps.LatLng(36.3519154 , 127.3779693),
+            new naver.maps.LatLng(36.3518851, 127.377968),
+            new naver.maps.LatLng(36.3518869, 127.3779006),
+          ],
+
+
+        ],
+        fillColor: '#EEEEEE',
+        fillOpacity: 1, //투명도
+        strokeColor: '#AAAAAA',
+        strokeOpacity: 0.2,
+        strokeWeight: 3,
+        clickable: true,
+      });
+
+      // 경로 탐색 알고리즘(Dijkstra) 구현
+      function dijkstra(start, end, safeArea) {
+        // 알고리즘 구현 부분은 생략했습니다.
+      }
+
+      // 출발지와 도착지 좌표
+      var start = door1;
+      var end = door2;
+
+      // 최단 경로 탐색
+      var shortestPath = dijkstra(start, end, safeArea);
+
+      map.setCenter(userLatLng);
+    </script>
+  </body>
+</html>
