@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 20,
   },
   overlayText: {
     fontSize: 20,
