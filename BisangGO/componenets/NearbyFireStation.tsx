@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
+// import { Image } from 'react-native';
 
 const styles = StyleSheet.create({
   fireAlarmContainer: {
@@ -21,6 +22,7 @@ const styles = StyleSheet.create({
 const NearbyFireStation = () => {
   return (
     <View style={styles.fireAlarmContainer}>
+      <Image source={require('../img/image1.png')} />
       <Text style={styles.text}>대전 둔산 소방서</Text>
       <Text style={styles.text}>가장 가까운 소방서</Text>
     </View>

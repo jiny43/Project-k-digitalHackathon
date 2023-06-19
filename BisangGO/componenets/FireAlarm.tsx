@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
 const styles = StyleSheet.create({
   fireAlarmContainer: {
     width: '90%',
@@ -13,6 +12,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'red',
+    borderRadius: 10,
+    opacity: 0.5,
   },
   text: {
     color: 'white',
