@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     width: '47%',
     height: '100%',
   },
-  bottomLeftInLeft: {
+  bottomLeftInTop: {
     width: '100%',
     height: '50%',
     display: 'flex',
@@ -126,7 +126,7 @@ const ControlSection = () => {
       <Text style={styles.overlayText}>컨트롤 섹션 부분입니다!!</Text>
       <View style={styles.bottomSection}>
         <View style={styles.bottomLeftSection}>
-          <View style={styles.bottomLeftInLeft}>
+          <View style={styles.bottomLeftInTop}>
             <SearchLocation />
             <SearchRoute />
           </View>
