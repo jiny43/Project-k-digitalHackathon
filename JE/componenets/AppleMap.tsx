@@ -12,8 +12,8 @@ const AppleMap = () => {
       <MapView
         style={{flex: 1}}
         initialRegion={{
-          latitude: 40.7626,
-          longitude: -73.9712,
+          latitude: 36.351868,
+          longitude: 127.382932,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}
