@@ -95,7 +95,7 @@ const ControlSection = () => {
       style={[styles.controlSection, {top: controlSectionTop}]} // ControlSection의 상단 위치 조정
       {...panResponder.panHandlers} // PanResponder 이벤트 핸들러 추가
     >
-      <Text style={styles.overlayText}>컨트롤 섹션 부분입니다!!</Text>
+      <Text style={styles.overlayText}>컨트롤 섹션 부분입니다!</Text>
     </Animated.View>
   );
 };
