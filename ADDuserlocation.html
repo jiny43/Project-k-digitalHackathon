@@ -22,7 +22,34 @@
         background-color: white;
         padding: 10px;
       }
+      .floor-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .floor-list li {
+        display: inline-block;
+        margin-right: 10px;
+      }
     </style>
+    <script>
+      function showFloor(floor) {
+        switch (floor) {
+          case 1:
+            window.location.href = 'b1.html';
+            break;
+          case 2:
+            window.location.href = 'ADDuserlocation.html';
+            break;
+          case 3:
+            window.location.href = 'second.html';
+            break;
+          // 층수 추가할 것
+          default:
+            break;
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="map"></div>
@@ -32,7 +59,17 @@
       <button onclick="showRestroomPath()">화장실 경로🚻</button>
       <button onclick="showHydrantPath()">완강기 경로🚨</button>
     </div>
-
+    <ul class="floor-list">
+      <li><button onclick="showFloor(1)">B1층</button></li>
+      <li><button onclick="showFloor(2)">1층</button></li>
+      <li><button onclick="showFloor(3)">2층</button></li>
+      <li><button onclick="showFloor(1)">3층</button></li>
+      <li><button onclick="showFloor(2)">4층</button></li>
+      <li><button onclick="showFloor(3)">5층</button></li>
+      <li><button onclick="showFloor(1)">6층</button></li>
+      <li><button onclick="showFloor(2)">7층</button></li>
+      <li><button onclick="showFloor(3)">8층</button></li>
+    </ul>
 
     <script>
 
@@ -62,8 +99,10 @@
       var restroom2 = new naver.maps.LatLng(36.3523013, 127.378555);
 
       var map = new naver.maps.Map('map', {
-        center: door1,
-        zoomControl: false
+        // center: door1,
+        center: new naver.maps.LatLng(36.3519688, 127.3781835),
+        zoomControl: false,
+        zoom:20,
       });
 
       var markerOptions = {
