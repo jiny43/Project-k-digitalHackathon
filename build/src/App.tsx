@@ -1,10 +1,11 @@
 import "./test.css"
 import React from 'react';
+import ArNaviBar from "./componenets/ArNaviBar";
 
 const App = () => {
     return (
         <div>
-            <h1>React App</h1>
+            <ArNaviBar />
         </div>
     );
 }
