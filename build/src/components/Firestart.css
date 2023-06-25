@@ -1,0 +1,16 @@
+.fire-container {
+  width: 350px;
+  height: 100px;
+  background-color: red;
+  opacity: 0.3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
+}
+
+p {
+  color: white;
+  text-align: center;
+}

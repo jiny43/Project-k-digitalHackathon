@@ -1,0 +1,17 @@
+.UserFire-container {
+  width: 350px;
+  height: 100px;
+  background-color: rgb(252, 252, 252);
+  opacity: 0.3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black; 
+  margin: 0 auto; 
+}
+
+p {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}

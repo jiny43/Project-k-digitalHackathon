@@ -1,12 +1,14 @@
-import "./test.css"
 import React from 'react';
+import UserFirstart from './components/UserFirestart';
+import Video from './components/Video';
 
-const App = () => {
-    return (
-        <div>
-            <h1>React App</h1>
-        </div>
-    );
+function App() {
+  return (
+    <div>
+      <UserFirstart />
+      <Video />
+    </div>
+  );
 }
 
 export default App;
