@@ -1,10 +1,11 @@
-import "./test.css"
+
 import React from 'react';
+import VoiceNavigation from './componenets/VoiceNavigation';
 
 const App = () => {
     return (
         <div>
-            <h1>React App</h1>
+            <VoiceNavigation></VoiceNavigation>
         </div>
     );
 }
