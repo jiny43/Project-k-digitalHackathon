@@ -1,0 +1,98 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 400px;
+  left: 400px;
+  border-radius: 50%;
+
+}
+
+.container.open {
+  background-color: #D1D1D1;
+  background-image: url('../img/Xwhite.png');
+  background-size: contain;
+  background-position: center;
+
+}
+
+.radial-menu {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.menu-toggle {
+  background-image: url('../img/TogleBtn.png');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.menu-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-item {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+}
+
+.item-top {
+  transform: translate(0px, 15px);
+  background-image: url('../img/Toilet.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-right {
+  transform: translate(60px, 25px);
+  background-image: url('../img/Sohwagi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-bottom {
+  transform: translate(0px, 30px);
+  background-image: url('../img/Escape.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.item-left {
+  transform: translate(-60px, -75px);
+  background-image: url('../img/Wanganggi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

@@ -1,10 +1,11 @@
 import "./test.css"
 import React from 'react';
+import TogleBtn from './components/TogleBtn'
 
 const App = () => {
     return (
         <div>
-            <h1>React App</h1>
+            <TogleBtn></TogleBtn>
         </div>
     );
 }
