@@ -20,8 +20,10 @@ const ArNaviBar = () => {
   return (
     <div style={conStyle}>
       <div style={barStyle}>
-        <img src='../img/Group.png'></img>
-        <img src='../img/Group6.jpg'></img>
+        <img src={require('../img/Group.png').default} alt="Group 1" />
+        <img src={require('../img/Group6.jpg').default} alt="Group 2" />
+        <img src={require('../img/Group5.png').default} alt="Group 3" />
+        <img src={require('../img/Group3.png').default} alt="Group 4" />
       </div>
     </div>
   );

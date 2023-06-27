@@ -1,4 +1,3 @@
-// webpack 수동 작성
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -21,20 +20,33 @@ const clientConfig = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images',
+              publicPath: 'images',
+            },
+          },
+        ],
+      },
     ],
   },
   resolve: {
-    extensions: ['.tsx','.ts','.js'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   optimization: {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           compress: {
-            drop_console: true, // 콘솔 로그 제거
+            drop_console: true,
           },
           output: {
-            comments: false, // 주석 제거
+            comments: false,
           },
         },
       }),
@@ -42,10 +54,10 @@ const clientConfig = {
   },
   output: {
     filename: 'client.bundle.js',
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, 'dist'),
   },
-
 };
+
 const serverConfig = {
   entry: './build/src/server/index.ts',
   mode: 'production',
@@ -71,14 +83,15 @@ const serverConfig = {
       new TerserPlugin({
         terserOptions: {
           compress: {
-            drop_console: true, // 콘솔 로그 제거
+            drop_console: true,
           },
           output: {
-            comments: false, // 주석 제거
+            comments: false,
           },
         },
       }),
     ],
   },
 };
+
 module.exports = [clientConfig, serverConfig];
