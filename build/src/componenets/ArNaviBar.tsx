@@ -16,14 +16,34 @@ const ArNaviBar = () => {
     backgroundColor: '#fff',
     borderRadius: '20px',
   };
+  const btnStyle = {
+    marginTop: '30px',
+    marginLeft: '15px',
+    marginRight: '15px',
+    display: 'flex',
+    FlexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center,'
+  }
 
   return (
     <div style={conStyle}>
       <div style={barStyle}>
-        <img src={require('../img/Group.png').default} alt="Group 1" />
-        <img src={require('../img/Group6.jpg').default} alt="Group 2" />
-        <img src={require('../img/Group5.jpg').default} alt="Group 3" />
-        <img src={require('../img/Group3.jpg').default} alt="Group 4" />
+        <div style={btnStyle}>
+          <div>
+            <img src={require('../img/Group.png').default} alt="Group 1" />
+          </div>
+          <div>
+            <img src={require('../img/Group6.jpg').default} alt="Group 2" />
+          </div>
+          <div>
+            <img src={require('../img/Group5.jpg').default} alt="Group 3" />
+          </div>
+          <div>
+            <img src={require('../img/Group3.jpg').default} alt="Group 4" />
+          </div>
+          <div>지도 전환</div>
+        </div>
       </div>
     </div>
   );
